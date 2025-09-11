@@ -2,7 +2,7 @@ import Button from "./components/common/Button";
 function App() {
   return (
     <>
-      <Button name='BUTTON' />
+      <Button name='BUTTON' border={false}/>
     </>
   );
 };

@@ -2,14 +2,15 @@ import styled from "styled-components";
 
 const Button = ({
   name,
+  border = true,
 }) => {
   return (
-    <ButtonStyled>{name}</ButtonStyled>
+    <ButtonStyled border={border}>{name}</ButtonStyled>
   );
 };
 
 const ButtonStyled = styled.button`
-  border: 1px solid #000;
+  border: ${({ border }) => border ? '1px solid #000' : 'none'};
   border-radius: 1.5rem;
   background: #222;
   color: #fff;
