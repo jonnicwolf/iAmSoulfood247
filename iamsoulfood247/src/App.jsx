@@ -5,11 +5,18 @@ import Input from "./components/common/Input";
 import Text from "./components/common/Text";
 import Checkbox from "./components/common/Checkbox";
 import Card from "./components/layout/Card";
+import Modal from "./components/layout/Modal";
 
 function App() {
   const [isChecked, setIsChecked] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   return (
+    <>
+    <Modal
+      isOpen={isModalOpen}
+      onClose={() => setIsModalOpen(false)}
+      >hello</Modal>
     <Card>
       <Button name='BUTTON' border={false} isnavbutton={false} />
       <Button name='BUTTON' border={false} isnavbutton />
@@ -23,6 +30,7 @@ function App() {
         error={!isChecked ? "You must accept to continue" : ""}
         />
     </Card>
+    </>
   );
 };
 
