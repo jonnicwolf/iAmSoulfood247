@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const Text = ({ content }) => {
+const Text = ({ content, textSize = 'md', bold = false }) => {
   return (
     <Wrapper>
-      <Content>{content}</Content>
+      <Content textSize={textSize} bold={bold}>{content}</Content>
     </Wrapper>
   );
 };
@@ -13,9 +13,10 @@ export default Text;
 const Wrapper = styled.div`
   text-align: center;
   max-width: 800px;
-  padding: ${({ theme }) => theme.spacing.md};
+  padding: ${({ theme }) => theme.spacing.textSize};
 `;
 const Content = styled.p`
-  font-size: ${({ theme }) => theme.fontSize.md};
+  font-size: ${({ theme, textSize }) => theme.fontSize[textSize]};
+  font-weight: ${({ bold }) => (bold ? "600" : "normal")};
   color: ${({ theme }) => theme.colors.text};
 `;
