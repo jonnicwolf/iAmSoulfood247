@@ -4,12 +4,13 @@ import Button from "./components/common/Button";
 import Input from "./components/common/Input";
 import Text from "./components/common/Text";
 import Checkbox from "./components/common/Checkbox";
+import Card from "./components/layout/Card";
 
 function App() {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <>
+    <Card>
       <Button name='BUTTON' border={false} isnavbutton={false} />
       <Button name='BUTTON' border={false} isnavbutton />
       <Input />
@@ -21,7 +22,7 @@ function App() {
         onChange={(e) => setIsChecked(e.target.checked)}
         error={!isChecked ? "You must accept to continue" : ""}
         />
-    </>
+    </Card>
   );
 };
 
