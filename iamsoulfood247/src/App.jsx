@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+
+import Button from "./components/common/Button";
+import Input from "./components/common/Input";
+import Text from "./components/common/Text";
+import Checkbox from "./components/common/Checkbox";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isChecked, setIsChecked] = useState(false);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Button name='BUTTON' border={false} isnavbutton={false} />
+      <Button name='BUTTON' border={false} isnavbutton />
+      <Input />
+      <Text content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." />
+      <Checkbox
+        id="terms"
+        label="Testing Checkbox"
+        checked={isChecked}
+        onChange={(e) => setIsChecked(e.target.checked)}
+        error={!isChecked ? "You must accept to continue" : ""}
+        />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
