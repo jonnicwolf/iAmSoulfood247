@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
 import Button from "./components/common/Button";
 import Input from "./components/common/Input";
@@ -7,13 +8,14 @@ import Checkbox from "./components/common/Checkbox";
 import Card from "./components/layout/Card";
 import Modal from "./components/layout/Modal";
 import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 
 function App() {
   const [isChecked, setIsChecked] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(true);
 
   return (
-    <>
+    <Container>
       <Navbar
         logo={"./src/assets/iAmSoulfood247_logo.png"}
         links={[
@@ -27,7 +29,7 @@ function App() {
         ]}
         rightContent={[{ label: "Login" }, { label: "Sign Up" }]}
         />
-      {/* <Modal
+      <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         >hello</Modal>
@@ -43,9 +45,29 @@ function App() {
           onChange={(e) => setIsChecked(e.target.checked)}
           error={!isChecked ? "You must accept to continue" : ""}
           />
-      </Card> */}
-    </>
+      </Card>
+      <Footer
+        links={[
+          { label: "Home", href: "#" },
+          { label: "Menu", href: "#" },
+          { label: "Meal Plans", href: "#" },
+          { label: "How It Works", href: "#" },
+          { label: "About Us", href: "#" },
+          { label: "FAQ", href: "#" },
+          { label: "Contact Us", href: "#" },
+        ]}
+        copyright={"iAmSoulfood247"}
+      />
+    </Container>
   );
 };
 
 export default App;
+
+const Container = styled.div`
+  min-height: 100vh;
+  background: ${({ theme }) => theme.colors.background};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
