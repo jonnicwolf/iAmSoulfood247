@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-const Text = ({ content, textSize = 'md', bold = false }) => {
+const Text = ({ content, textSize = 'md', bold = false, color = 
+'text'
+ }) => {
   return (
     <Wrapper>
-      <Content textSize={textSize} bold={bold}>{content}</Content>
+      <Content textSize={textSize} bold={bold} color={color}>{content}</Content>
     </Wrapper>
   );
 };
@@ -18,5 +20,5 @@ const Wrapper = styled.div`
 const Content = styled.p`
   font-size: ${({ theme, textSize }) => theme.fontSize[textSize]};
   font-weight: ${({ bold }) => (bold ? "600" : "normal")};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme, color }) => theme.colors[color] ? theme.colors[color] : theme.colors.text};
 `;

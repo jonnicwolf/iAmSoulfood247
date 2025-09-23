@@ -25,6 +25,7 @@ const Wrapper = styled.footer`
   flex-direction: column;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.md};
+  width: 100%;
 `;
 
 const Links = styled.nav`

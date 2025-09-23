@@ -28,24 +28,67 @@ function App() {
           { label: "Contact Us", href: "#" },
         ]}
         rightContent={[{ label: "Login" }, { label: "Sign Up" }]}
-        />
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        >hello</Modal>
+      />
       <Card>
-        <Button name='BUTTON' border={false} isnavbutton={false} />
-        <Button name='BUTTON' border={false} isnavbutton />
-        <Input />
-        <Text content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." />
-        <Checkbox
-          id="terms"
-          label="Testing Checkbox"
-          checked={isChecked}
-          onChange={(e) => setIsChecked(e.target.checked)}
-          error={!isChecked ? "You must accept to continue" : ""}
+        <TitleContent>
+          <img
+            src="./src/assets/iAmSoulfood247_logo.png"
+            alt="iAmSoulfood247 Logo"
+            style={{ width: "400px", marginBottom: "20px" }}
           />
+          <Text
+            content={"IAMSOULFOOD247.COM"}
+            textSize="xxl"
+            bold
+          />
+        </TitleContent>
       </Card>
+
+      <ContentCard>
+        <ConceptContent>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            gap: '5rem',
+            height: '400px',
+            maxWidth: "40%" }}>
+            <Text content={"OUR CONCEPT"} textSize="xxl" color="surface" bold />
+            <Text
+              content={"iAmSoulfood247 2 Go aims to revolutionize the meal prep industry by offering delicious, healthy soul food options that cater to busy individuals seeking nutritious meals without sacrificing flavor. Our mission is to make soul food accessible, affordable, and health-conscious, promoting a balanced lifestyle while celebrating the rich culinary heritage of soul food."}
+              textSize="lg"
+              color="surface"
+              />
+          </div>
+          <img
+            src="./src/assets/soulfood.jpg"
+            alt=""
+            style={{ width: "50%", }} />
+        </ConceptContent>
+      </ContentCard>
+
+      <ContentCard>
+        <ConceptContent>
+          <img
+            src="./src/assets/catering.jpg"
+            alt=""
+            style={{ width: "50%", }} />
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            gap: '5rem',
+            height: '400px',
+            maxWidth: "40%" }}>
+            <Text content={"LET US CATER"} textSize="xxl" color="surface" bold/>
+            <Text
+              content={"iAmSoulfood247 Catering brings the heart of soulful cooking to your gatherings, combining rich flavors with health-conscious preparation. Whether it’s a corporate lunch, family celebration, or large-scale event, we deliver meals that are both comforting and nourishing. Our goal is to make authentic soul food accessible and memorable for every occasion—celebrating tradition while supporting modern lifestyles."}
+              textSize="lg"
+              color="surface"
+              />
+          </div>
+        </ConceptContent>
+      </ContentCard>
       <Footer
         links={[
           { label: "Home", href: "#" },
@@ -66,8 +109,27 @@ export default App;
 
 const Container = styled.div`
   min-height: 100vh;
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.surface};
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  gap: ${({ theme }) => theme.spacing.lg};
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+`;
+const TitleContent = styled(Content)``;
+const ContentCard = styled(Card)`
+  width: 90%;
+  box-shadow: none;
+`;
+const ConceptContent = styled(Content)`
+  background: ${({ theme }) => theme.colors.textLight};
+  flex-direction: row;
+  justify-content: space-around;
 `;
