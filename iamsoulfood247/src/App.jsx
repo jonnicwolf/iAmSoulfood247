@@ -39,8 +39,7 @@ function App() {
           <Text
             content={"IAMSOULFOOD247.COM"}
             textSize="xxl"
-            bold
-          />
+            bold />
         </TitleContent>
       </Card>
 
@@ -57,8 +56,12 @@ function App() {
             <Text
               content={"iAmSoulfood247 2 Go aims to revolutionize the meal prep industry by offering delicious, healthy soul food options that cater to busy individuals seeking nutritious meals without sacrificing flavor. Our mission is to make soul food accessible, affordable, and health-conscious, promoting a balanced lifestyle while celebrating the rich culinary heritage of soul food."}
               textSize="lg"
-              color="surface"
-              />
+              color="surface" />
+            <Button
+              name={"MORE ABOUT US"}
+              border
+              isnavbutton
+            />
           </div>
           <img
             src="./src/assets/soulfood.jpg"
@@ -78,7 +81,7 @@ function App() {
             flexDirection: 'column',
             justifyContent: 'space-between',
             gap: '5rem',
-            height: '400px',
+            height: '450px',
             maxWidth: "40%" }}>
             <Text content={"LET US CATER"} textSize="xxl" color="surface" bold/>
             <Text
@@ -86,9 +89,43 @@ function App() {
               textSize="lg"
               color="surface"
               />
+            <Button
+              name={"WHAT WE OFFER"}
+              border
+              isnavbutton
+            />
           </div>
         </ConceptContent>
       </ContentCard>
+
+      <ContentCard>
+        <ConceptContent>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            gap: '5rem',
+            height: '400px',
+            maxWidth: "40%" }}>
+            <Text content={"MEAL PLANS"} textSize="xxl" color="surface" bold/>
+            <Text
+              content={"iAmSoulfood247 Meal Plans are designed for busy individuals who want soulful flavor without compromising health or convenience. Our rotating menus balance tradition with nutrition, offering portioned, ready-to-enjoy meals that fit seamlessly into your lifestyle. With flexible options to match your goals, we make eating well simple, affordable, and full of soul."}
+              textSize="lg"
+              color="surface"
+              />
+            <Button
+              name={"Explore Meal Plans"}
+              border
+              isnavbutton
+            />
+          </div>
+          <img
+            src="./src/assets/mealPlan.jpg"
+            alt=""
+            style={{ width: "50%", }} />
+        </ConceptContent>
+      </ContentCard>
+
       <Footer
         links={[
           { label: "Home", href: "#" },
