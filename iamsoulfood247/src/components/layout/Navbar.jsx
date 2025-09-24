@@ -13,7 +13,9 @@ const Navbar = ({ logo, links = [], rightContent = [] }) => {
           </NavItem>
         ))}
       </NavLinks>
+
       {rightContent &&
+       <RightContentWrapper>
         <RightContent>
           {rightContent.map((content, i) => (
             <Button
@@ -21,7 +23,8 @@ const Navbar = ({ logo, links = [], rightContent = [] }) => {
               isnavbutton={true}
               key={i}>{content}</Button>
           ))}
-        </RightContent>}
+        </RightContent>
+       </RightContentWrapper>}
     </Nav>
   );
 };
@@ -62,6 +65,11 @@ const NavItem = styled.a`
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
+`;
+
+const RightContentWrapper = styled.div`
+  background: ${({ theme }) => theme.colors.textLight};
+  border-radius: 2rem;
 `;
 
 const RightContent = styled.div`
