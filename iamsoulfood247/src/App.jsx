@@ -17,7 +17,7 @@ function App() {
   return (
     <Container>
       <Navbar
-        logo={"./src/assets/iAmSoulfood247_logo.png"}
+        logo={"https://dl.dropboxusercontent.com/scl/fi/5761osx5w55gqeakjwjlw/iAmSoulfood247_logo.png?rlkey=hw7vcgy24mfj9712wdgu16oqf&st=qxjum5u0"}
         links={[
           { label: "Home", href: "#" },
           { label: "Menu", href: "#" },
@@ -32,7 +32,7 @@ function App() {
       <Card>
         <TitleContent>
           <img
-            src="./src/assets/iAmSoulfood247_logo.png"
+            src="https://dl.dropboxusercontent.com/scl/fi/5761osx5w55gqeakjwjlw/iAmSoulfood247_logo.png?rlkey=hw7vcgy24mfj9712wdgu16oqf&st=qxjum5u0"
             alt="iAmSoulfood247 Logo"
             style={{ width: "400px", marginBottom: "20px" }}
           />
@@ -64,7 +64,7 @@ function App() {
             />
           </div>
           <img
-            src="./src/assets/soulfood.jpg"
+            src="https://dl.dropboxusercontent.com/scl/fi/jt7zghw8189lio026no70/soulfood.jpg?rlkey=ww72w9lurnz692r53volvt77p&st=0msnug71"
             alt=""
             style={{ width: "50%", }} />
         </ConceptContent>
@@ -73,7 +73,7 @@ function App() {
       <ContentCard>
         <ConceptContent>
           <img
-            src="./src/assets/catering.jpg"
+            src="https://dl.dropboxusercontent.com/scl/fi/jevkllqaur7xrgkizv4ij/catering.jpg?rlkey=ss7svgetibrf8lrwi514e7zsp&st=chhe2cpw"
             alt=""
             style={{ width: "50%", }} />
           <div style={{
@@ -120,7 +120,7 @@ function App() {
             />
           </div>
           <img
-            src="./src/assets/mealPlan.jpg"
+            src="https://dl.dropboxusercontent.com/scl/fi/ekl4xx8i8pq7hdtn5zpwi/mealPlan.jpg?rlkey=e93b1s5ysl1t3wabkfcvii1ps&st=qto52op8"
             alt=""
             style={{ width: "50%", }} />
         </ConceptContent>
