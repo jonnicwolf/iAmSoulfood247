@@ -21,7 +21,7 @@ const CardWrapper = styled.div`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.md};
   transition: box-shadow 0.2s ease;
-
+  width: 100%;
   &:hover {
     box-shadow: ${({ theme }) => theme.shadows.lg};
   }
