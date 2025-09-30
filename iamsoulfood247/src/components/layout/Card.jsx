@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const Card = ({ title, children, footer, ...props }) => {
+const Card = ({ title, children, footer, center, ...props }) => {
   return (
-    <CardWrapper {...props}>
+    <CardWrapper center={center}{...props}>
       {title && <CardHeader>{title}</CardHeader>}
       <CardBody>{children}</CardBody>
       {footer && <CardFooter>{footer}</CardFooter>}
@@ -20,8 +20,10 @@ const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.md};
+  align-items: ${props => (props.center ? 'center' : 'flex-start')};
   transition: box-shadow 0.2s ease;
   width: 100%;
+
   &:hover {
     box-shadow: ${({ theme }) => theme.shadows.lg};
   }

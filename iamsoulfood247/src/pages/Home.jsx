@@ -1,16 +1,13 @@
 import styled from 'styled-components';
 
 import Button from '../components/common/Button';
-import Input from '../components/common/Input';
 import Text from '../components/common/Text';
-import Checkbox from '../components/common/Checkbox';
 import Card from '../components/layout/Card';
-import Modal from '../components/layout/Modal';
 
 const Home = () => {
   return (
-    <div>
-      <Card>
+    <>
+      <Card center>
         <TitleContent>
           <img
             src="https://dl.dropboxusercontent.com/scl/fi/5761osx5w55gqeakjwjlw/iAmSoulfood247_logo.png?rlkey=hw7vcgy24mfj9712wdgu16oqf&st=qxjum5u0"
@@ -31,7 +28,6 @@ const Home = () => {
             flexDirection: 'column',
             justifyContent: 'space-between',
             gap: '5rem',
-            height: '400px',
             maxWidth: "40%" }}>
             <Text content={"OUR CONCEPT"} textSize="xxl" color="surface" bold />
             <Text
@@ -62,7 +58,6 @@ const Home = () => {
             flexDirection: 'column',
             justifyContent: 'space-between',
             gap: '5rem',
-            height: '450px',
             maxWidth: "40%" }}>
             <Text content={"LET US CATER"} textSize="xxl" color="surface" bold/>
             <Text
@@ -86,7 +81,6 @@ const Home = () => {
             flexDirection: 'column',
             justifyContent: 'space-between',
             gap: '5rem',
-            height: '400px',
             maxWidth: "40%" }}>
             <Text content={"MEAL PLANS"} textSize="xxl" color="surface" bold/>
             <Text
@@ -106,7 +100,7 @@ const Home = () => {
             style={{ width: "50%", }} />
         </ConceptContent>
       </ContentCard>
-    </div>
+    </>
   );
 };
 

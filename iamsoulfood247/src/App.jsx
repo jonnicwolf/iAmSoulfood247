@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
+import Concept from "./pages/Concept";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -28,6 +29,7 @@ function App() {
       />
       <Routes>
         <Route index path="/" element={<Home />} />
+        <Route path="/concept" element={<Concept />} />
       </Routes>
       <Footer
         links={[
