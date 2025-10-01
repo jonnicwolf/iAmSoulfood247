@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Button from '../components/common/Button';
 import Text from '../components/common/Text';
 import Card from '../components/layout/Card';
+import { Link } from 'react-router-dom';
+import LinkButton from '../components/common/LinkButton';
 
 const Home = () => {
   return (
@@ -27,6 +29,7 @@ const Home = () => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
+            alignItems: 'center',
             gap: '5rem',
             maxWidth: "40%" }}>
             <Text content={"OUR CONCEPT"} textSize="xxl" color="surface" bold />
@@ -34,11 +37,13 @@ const Home = () => {
               content={"iAmSoulfood247 2 Go aims to revolutionize the meal prep industry by offering delicious, healthy soul food options that cater to busy individuals seeking nutritious meals without sacrificing flavor. Our mission is to make soul food accessible, affordable, and health-conscious, promoting a balanced lifestyle while celebrating the rich culinary heritage of soul food."}
               textSize="lg"
               color="surface" />
-            <Button
+            <LinkButton
+              to="/concept"
               name={"MORE ABOUT US"}
               border
               isnavbutton
-            />
+              color="textLight"
+              backgroundColor="surface" />
           </div>
           <img
             src="https://dl.dropboxusercontent.com/scl/fi/jt7zghw8189lio026no70/soulfood.jpg?rlkey=ww72w9lurnz692r53volvt77p&st=0msnug71"
@@ -57,6 +62,7 @@ const Home = () => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
+            alignItems: 'center',
             gap: '5rem',
             maxWidth: "40%" }}>
             <Text content={"LET US CATER"} textSize="xxl" color="surface" bold/>
@@ -65,11 +71,13 @@ const Home = () => {
               textSize="lg"
               color="surface"
               />
-            <Button
+            <LinkButton
+              to="/concept"
               name={"WHAT WE OFFER"}
               border
               isnavbutton
-            />
+              color="textLight"
+              backgroundColor="surface" />
           </div>
         </ConceptContent>
       </ContentCard>
@@ -80,6 +88,7 @@ const Home = () => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
+            alignItems: 'center',
             gap: '5rem',
             maxWidth: "40%" }}>
             <Text content={"MEAL PLANS"} textSize="xxl" color="surface" bold/>
@@ -88,11 +97,13 @@ const Home = () => {
               textSize="lg"
               color="surface"
               />
-            <Button
-              name={"Explore Meal Plans"}
+            <LinkButton
+              to="/concept"
+              name={"EXPLORE MEAL PLANS"}
               border
               isnavbutton
-            />
+              color="textLight"
+              backgroundColor="surface" />
           </div>
           <img
             src="https://dl.dropboxusercontent.com/scl/fi/ekl4xx8i8pq7hdtn5zpwi/mealPlan.jpg?rlkey=e93b1s5ysl1t3wabkfcvii1ps&st=qto52op8"
