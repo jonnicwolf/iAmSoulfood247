@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
-import Button from '../components/common/Button';
 import Text from '../components/common/Text';
 import Card from '../components/layout/Card';
-import { Link } from 'react-router-dom';
 import LinkButton from '../components/common/LinkButton';
 
 const Home = () => {
   return (
-    <>
+    <PageWrapper>
       <Card center>
         <TitleContent>
           <img
@@ -111,11 +109,15 @@ const Home = () => {
             style={{ width: "50%", }} />
         </ConceptContent>
       </ContentCard>
-    </>
+    </PageWrapper>
   );
 };
 
 export default Home;
+
+const PageWrapper = styled.div`
+  margin-bottom: 1rem;
+`;
 
 const Content = styled.div`
   display: flex;

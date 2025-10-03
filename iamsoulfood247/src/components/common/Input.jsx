@@ -33,6 +33,11 @@ const StyledInput = styled.input`
   font-size: ${({ theme }) => theme.fontSize.md};
   outline: none;
 
+  &:hover {
+    border-color: ${({ theme, hasError }) =>
+      hasError ? "crimson" : theme.colors.primaryDark};
+    background-color: ${({ theme }) => theme.colors.surface};
+  }
   &:focus {
     border-color: ${({ theme, hasError }) =>
       hasError ? "crimson" : theme.colors.secondary};

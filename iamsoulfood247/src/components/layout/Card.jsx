@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const Card = ({ title, children, footer, center, ...props }) => {
+const Card = ({ title, size = 'lg', children, footer, center, ...props }) => {
   return (
     <CardWrapper center={center}{...props}>
-      {title && <CardHeader>{title}</CardHeader>}
+      {title && <CardHeader size={size}>{title}</CardHeader>}
       <CardBody>{children}</CardBody>
       {footer && <CardFooter>{footer}</CardFooter>}
     </CardWrapper>
@@ -30,7 +30,7 @@ const CardWrapper = styled.div`
 `;
 
 const CardHeader = styled.h3`
-  font-size: ${({ theme }) => theme.fontSize.lg};
+  font-size: ${({ theme, size }) => theme.fontSize[size]};
   font-weight: 600;
   color: ${({ theme }) => theme.colors.text};
 `;

@@ -6,7 +6,6 @@ import Button from "../components/common/Button";
 import EntreeMenu from "../components/molecules/EntreeMenu";
 
 const Concept = () => {
-
   return (
     <>
       <div>
@@ -15,7 +14,6 @@ const Concept = () => {
           alt=""
           style={{
             width: "100vw",
-            objectFit: "cover",
             transform: "translateY(-30px)",}} />
         <HeroText>
           IAMSOULFOOD247

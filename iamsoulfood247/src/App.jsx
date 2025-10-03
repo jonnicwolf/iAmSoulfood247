@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Concept from "./pages/Concept";
+import Catering from "./pages/Catering";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/concept" element={<Concept />} />
+        <Route path="/catering" element={<Catering />} />
       </Routes>
       <Footer
         links={[
@@ -56,5 +58,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  gap: ${({ theme }) => theme.spacing.lg};
 `;
+
+const PageWrapper = styled.div`
+  margin-bottom: 1rem;
+`
+
