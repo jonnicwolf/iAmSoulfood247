@@ -71,6 +71,7 @@ const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  padding: ${({ theme }) => theme.spacing.lg};
 `;
 
 const Menu = styled.div`

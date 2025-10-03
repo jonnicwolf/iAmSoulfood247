@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const Card = ({ title, size = 'lg', children, footer, center, ...props }) => {
+const Card = ({ title, size = 'lg', borderRadius='lg', children, footer, center, ...props }) => {
   return (
-    <CardWrapper center={center}{...props}>
+    <CardWrapper center={center} borderRadius={borderRadius}{...props}>
       {title && <CardHeader size={size}>{title}</CardHeader>}
       <CardBody>{children}</CardBody>
       {footer && <CardFooter>{footer}</CardFooter>}
@@ -14,7 +14,7 @@ export default Card;
 
 const CardWrapper = styled.div`
   background: ${({ theme }) => theme.colors.surface};
-  border-radius: ${({ theme }) => theme.radii.lg};
+  border-radius: ${({ theme, borderRadius }) => theme.radii[borderRadius]};
   box-shadow: ${({ theme }) => theme.shadows.md};
   padding: ${({ theme }) => theme.spacing.lg};
   display: flex;

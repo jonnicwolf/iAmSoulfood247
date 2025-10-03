@@ -7,7 +7,7 @@ import LinkButton from '../components/common/LinkButton';
 const Home = () => {
   return (
     <PageWrapper>
-      <Card center>
+      <Card center style={{ boxShadow: 'none', margin: '2rem 0 0 0' }}>
         <TitleContent>
           <img
             src="https://dl.dropboxusercontent.com/scl/fi/5761osx5w55gqeakjwjlw/iAmSoulfood247_logo.png?rlkey=hw7vcgy24mfj9712wdgu16oqf&st=qxjum5u0"
@@ -116,7 +116,10 @@ const Home = () => {
 export default Home;
 
 const PageWrapper = styled.div`
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 `;
 
 const Content = styled.div`

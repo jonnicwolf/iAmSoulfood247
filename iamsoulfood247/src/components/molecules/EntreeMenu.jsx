@@ -18,6 +18,7 @@ const EntreeMenu = () => {
           </>
         }
         center
+        borderRadius="none"
       />
       <Card
         title="FRIED CHICKEN DINNER"
@@ -32,6 +33,7 @@ const EntreeMenu = () => {
           </>
         }
         center
+        borderRadius="none"
       />
       <Card
         title="CATFISH DINNER"
@@ -46,6 +48,7 @@ const EntreeMenu = () => {
           </>
         }
         center
+        borderRadius="none"
       />
       <Card
         title="SMOTHERED PORK CHOPS"
@@ -60,6 +63,7 @@ const EntreeMenu = () => {
           </>
         }
         center
+        borderRadius="none"
       />
       <Card
         title="OXTAIL & GRAVY"
@@ -74,6 +78,7 @@ const EntreeMenu = () => {
           </>
         }
         center
+        borderRadius="none"
       />
       <Card
         title="BBQ RIB PLATE"
@@ -88,6 +93,7 @@ const EntreeMenu = () => {
           </>
         }
         center
+        borderRadius="none"
       />
       <Card
         title="MEATLOAF SUPPER"
@@ -102,6 +108,7 @@ const EntreeMenu = () => {
           </>
         }
         center
+        borderRadius="none"
       />
       <Card
         title="CHICKEN & WAFFLES"
@@ -116,6 +123,7 @@ const EntreeMenu = () => {
           </>
         }
         center
+        borderRadius="none"
       />
       <Card
         title="VEGAN SOUL BOWL"
@@ -130,6 +138,7 @@ const EntreeMenu = () => {
           </>
         }
         center
+        borderRadius="none"
       />
     </>
   );

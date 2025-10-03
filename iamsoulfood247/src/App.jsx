@@ -18,12 +18,11 @@ function App() {
       <Navbar
         logo={"https://dl.dropboxusercontent.com/scl/fi/5761osx5w55gqeakjwjlw/iAmSoulfood247_logo.png?rlkey=hw7vcgy24mfj9712wdgu16oqf&st=qxjum5u0"}
         links={[
-          { label: "Home", href: "#" },
-          { label: "Menu", href: "#" },
-          { label: "Meal Plans", href: "#" },
-          { label: "How It Works", href: "#" },
+          { label: "Home", href: "/" },
+          { label: "Menu", href: "/concept" },
+          // { label: "Meal Plans", href: "#" },
+          // { label: "How It Works", href: "#" },
           { label: "About Us", href: "#" },
-          { label: "FAQ", href: "#" },
           { label: "Contact Us", href: "#" },
         ]}
         rightContent={[{ label: "Login" }, { label: "Sign Up" }]}
@@ -35,12 +34,11 @@ function App() {
       </Routes>
       <Footer
         links={[
-          { label: "Home", href: "#" },
-          { label: "Menu", href: "#" },
-          { label: "Meal Plans", href: "#" },
-          { label: "How It Works", href: "#" },
+          { label: "Home", href: "/" },
+          { label: "Menu", href: "/concept" },
+          // { label: "Meal Plans", href: "#" },
+          // { label: "How It Works", href: "#" },
           { label: "About Us", href: "#" },
-          { label: "FAQ", href: "#" },
           { label: "Contact Us", href: "#" },
         ]}
         copyright={"iAmSoulfood247"}
@@ -59,8 +57,3 @@ const Container = styled.div`
   align-items: center;
   width: 100vw;
 `;
-
-const PageWrapper = styled.div`
-  margin-bottom: 1rem;
-`
-
