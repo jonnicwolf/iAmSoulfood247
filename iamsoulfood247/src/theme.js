@@ -13,6 +13,9 @@ export const theme = {
     lg: '1.25rem',
     xl: '1.5rem',
     xxl: '2rem',
+    xxxl: '4rem',
+    xxx_xl: '8rem',
+    xxx_xxl: '16rem',
   },
   colors: {
     primary: '#1c1c1e',

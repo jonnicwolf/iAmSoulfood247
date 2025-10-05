@@ -18,13 +18,14 @@ const Footer = ({ links = [], copyright }) => {
 export default Footer;
 
 const Wrapper = styled.footer`
+  align-items: center;
   background: ${({ theme }) => theme.colors.textLight};
   color: ${({ theme }) => theme.colors.background};
-  padding: ${({ theme }) => `${theme.spacing.lg} ${theme.spacing.md}`};
   display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: ${({ theme }) => theme.spacing.md};
+  flex-direction: column;
+  margin-top: ${({ theme }) => theme.spacing.xl};
+  padding: ${({ theme }) => `${theme.spacing.lg} ${theme.spacing.md}`};
   width: 100%;
 `;
 
