@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Concept from "./pages/Concept";
 import Catering from "./pages/Catering";
 import About from "./pages/About";
+import ContactUs from "./pages/ContactUs";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -24,7 +25,7 @@ function App() {
           // { label: "Meal Plans", href: "#" },
           // { label: "How It Works", href: "#" },
           { label: "About Us", href: "/about" },
-          { label: "Contact Us", href: "#" },
+          { label: "Contact Us", href: "/contact" },
         ]}
         rightContent={[{ label: "Login" }, { label: "Sign Up" }]}
       />
@@ -33,6 +34,7 @@ function App() {
         <Route path="/concept" element={<Concept />} />
         <Route path="/catering" element={<Catering />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer
         links={[
@@ -41,7 +43,7 @@ function App() {
           // { label: "Meal Plans", href: "#" },
           // { label: "How It Works", href: "#" },
           { label: "About Us", href: "/about" },
-          { label: "Contact Us", href: "#" },
+          { label: "Contact Us", href: "contact" },
         ]}
         copyright={"iAmSoulfood247"}
       />
