@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Concept from "./pages/Concept";
 import Catering from "./pages/Catering";
+import About from "./pages/About";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -22,7 +23,7 @@ function App() {
           { label: "Menu", href: "/concept" },
           // { label: "Meal Plans", href: "#" },
           // { label: "How It Works", href: "#" },
-          { label: "About Us", href: "#" },
+          { label: "About Us", href: "/about" },
           { label: "Contact Us", href: "#" },
         ]}
         rightContent={[{ label: "Login" }, { label: "Sign Up" }]}
@@ -31,6 +32,7 @@ function App() {
         <Route index path="/" element={<Home />} />
         <Route path="/concept" element={<Concept />} />
         <Route path="/catering" element={<Catering />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer
         links={[
@@ -38,7 +40,7 @@ function App() {
           { label: "Menu", href: "/concept" },
           // { label: "Meal Plans", href: "#" },
           // { label: "How It Works", href: "#" },
-          { label: "About Us", href: "#" },
+          { label: "About Us", href: "/about" },
           { label: "Contact Us", href: "#" },
         ]}
         copyright={"iAmSoulfood247"}

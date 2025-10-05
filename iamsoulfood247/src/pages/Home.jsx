@@ -70,7 +70,7 @@ const Home = () => {
               color="surface"
               />
             <LinkButton
-              to="/concept"
+              to="/catering"
               name={"WHAT WE OFFER"}
               border
               isnavbutton
