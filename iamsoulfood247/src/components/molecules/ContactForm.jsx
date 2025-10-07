@@ -24,7 +24,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Form ref={form} onSubmit={sendEmail}>
+    <Form ref={form} onSubmit={(e) => sendEmail(e,form)}>
       <Text content="CATERING INQUIRY" textSize="xxxl" center />
       <Input onChange={handleChange} placeholder="Full Name*" name='fullName' required />
       <Input onChange={handleChange} placeholder="Email*" name='email' required />

@@ -1,4 +1,6 @@
-export const sendEmail = (e) => {
+import emailjs from 'emailjs-com';
+
+export const sendEmail = (e, form) => {
   e.preventDefault();
 
   emailjs
