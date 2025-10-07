@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styled from "styled-components";
 
 import Text from '../common/Text';
 import Input from '../common/Input';
+
+import { sendEmail } from '../../utils/sendEmail';
+import { send } from 'emailjs-com';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +14,7 @@ const ContactForm = () => {
     phone: '',
     message: ''
   });
+  const form = useRef();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,13 +23,8 @@ const ContactForm = () => {
     console.log(formData);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form ref={form} onSubmit={sendEmail}>
       <Text content="CATERING INQUIRY" textSize="xxxl" center />
       <Input onChange={handleChange} placeholder="Full Name*" name='fullName' required />
       <Input onChange={handleChange} placeholder="Email*" name='email' required />
