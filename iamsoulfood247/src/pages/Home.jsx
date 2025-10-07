@@ -43,19 +43,19 @@ const Home = () => {
               color="textLight"
               backgroundColor="surface" />
           </div>
-          <img
+          <Img
             src="https://dl.dropboxusercontent.com/scl/fi/jt7zghw8189lio026no70/soulfood.jpg?rlkey=ww72w9lurnz692r53volvt77p&st=0msnug71"
             alt=""
-            style={{ width: "50%", }} />
+            />
         </ConceptContent>
       </ContentCard>
 
       <ContentCard>
         <ConceptContent>
-          <img
+          <Img
             src="https://dl.dropboxusercontent.com/scl/fi/jevkllqaur7xrgkizv4ij/catering.jpg?rlkey=ss7svgetibrf8lrwi514e7zsp&st=chhe2cpw"
             alt=""
-            style={{ width: "50%", }} />
+             />
           <div style={{
             display: 'flex',
             flexDirection: 'column',
@@ -103,10 +103,10 @@ const Home = () => {
               color="textLight"
               backgroundColor="surface" />
           </div>
-          <img
+          <Img
             src="https://dl.dropboxusercontent.com/scl/fi/ekl4xx8i8pq7hdtn5zpwi/mealPlan.jpg?rlkey=e93b1s5ysl1t3wabkfcvii1ps&st=qto52op8"
             alt=""
-            style={{ width: "50%", }} />
+            />
         </ConceptContent>
       </ContentCard>
     </PageWrapper>
@@ -130,11 +130,16 @@ const Content = styled.div`
 `;
 const TitleContent = styled(Content)``;
 const ContentCard = styled(Card)`
-  width: 90%;
   box-shadow: none;
 `;
 const ConceptContent = styled(Content)`
   background: ${({ theme }) => theme.colors.textLight};
   flex-direction: row;
   justify-content: space-around;
+  padding: 55px;
 `;
+
+const Img = styled.img`
+  width: 800px;
+  height: 800px;
+`
