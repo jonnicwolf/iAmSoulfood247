@@ -27,8 +27,24 @@ const CateringForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-    console.log(formData);
+  const clearForm = () => {
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      contact: '',
+      company: '',
+      eventDate: '',
+      eventNature: '',
+      service: '',
+      startTime: '',
+      endTime: '',
+      numberOfGuests: '',
+      eventAddress: '',
+      additionalInfo: ''
+    })
   };
 
   const handleCheckboxChange = (e) => {
@@ -39,7 +55,10 @@ const CateringForm = () => {
   };
 
   return (
-    <Form ref={form} onSubmit={(e)=>sendEmail(e, form)}>
+    <Form ref={form} onSubmit={(e)=>{
+        sendEmail(e, form);
+        clearForm();
+      }}>
       <Text content="CATERING INQUIRY" textSize="xxxl" />
       <Input onChange={handleChange} placeholder="Full Name*" name='fullName' required />
       <Input onChange={handleChange} placeholder="Email*" name='email' required />
