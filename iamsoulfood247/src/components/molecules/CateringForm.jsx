@@ -101,8 +101,17 @@ const CateringForm = () => {
         <Input onChange={handleChange} label='End Time*' type='time' name='endTime' />
       </TimeContainer>
 
-      <Input onChange={handleChange} label='Number of guests*' placeholder="Number of Guests*" type='number' name='numberOfGuests' required />
-      <Input onChange={handleChange} placeholder="Event Address*" type='text' name='eventAddress' required />
+      <Input
+        onChange={handleChange}
+        label='Number of guests*'
+        placeholder="Number of Guests*"
+        type='number'
+        name='numberOfGuests' required />
+      <Input
+        onChange={handleChange}
+        placeholder="Event Address*"
+        type='text'
+        name='eventAddress' required />
       <TextArea onChange={handleChange} placeholder="Is there any additional information you would like to add?" name='additionalInfo' />
 
       <Input type='submit' value="Submit" />

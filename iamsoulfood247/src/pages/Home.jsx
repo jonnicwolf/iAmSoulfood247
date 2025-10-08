@@ -142,4 +142,4 @@ const ConceptContent = styled(Content)`
 const Img = styled.img`
   width: 800px;
   height: 800px;
-`
+`;
