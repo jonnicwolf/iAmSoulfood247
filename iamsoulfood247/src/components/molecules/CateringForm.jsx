@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styled from "styled-components";
 
 import Text from "../common/Text";
 import Input from "../common/Input";
 import Checkbox from "../common/Checkbox";
+import { sendEmail } from "../../utils/sendEmail";
 
 const CateringForm = () => {
   const [formData, setFormData] = useState({
@@ -21,12 +22,29 @@ const CateringForm = () => {
     eventAddress: '',
     additionalInfo: ''
   });
+  const form = useRef();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-    console.log(formData);
+  const clearForm = () => {
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      contact: '',
+      company: '',
+      eventDate: '',
+      eventNature: '',
+      service: '',
+      startTime: '',
+      endTime: '',
+      numberOfGuests: '',
+      eventAddress: '',
+      additionalInfo: ''
+    })
   };
 
   const handleCheckboxChange = (e) => {
@@ -36,13 +54,11 @@ const CateringForm = () => {
     else setFormData((prev) => ({ ...prev, contact: '' }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form ref={form} onSubmit={(e)=>{
+        sendEmail(e, form, 'template_9zxn0jo');
+        clearForm();
+      }}>
       <Text content="CATERING INQUIRY" textSize="xxxl" />
       <Input onChange={handleChange} placeholder="Full Name*" name='fullName' required />
       <Input onChange={handleChange} placeholder="Email*" name='email' required />

@@ -5,7 +5,6 @@ import Text from '../common/Text';
 import Input from '../common/Input';
 
 import { sendEmail } from '../../utils/sendEmail';
-import { send } from 'emailjs-com';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -23,9 +22,21 @@ const ContactForm = () => {
     console.log(formData);
   };
 
+  const clearForm = () => {
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      message: ''
+    })
+  };
+
   return (
-    <Form ref={form} onSubmit={sendEmail}>
-      <Text content="CATERING INQUIRY" textSize="xxxl" center />
+    <Form ref={form} onSubmit={(e) => {
+        sendEmail(e,form, 'template_2dbzpp9');
+        clearForm();
+      }}>
+      <Text content="CONTACT US" textSize="xxxl" center />
       <Input onChange={handleChange} placeholder="Full Name*" name='fullName' required />
       <Input onChange={handleChange} placeholder="Email*" name='email' required />
       <Input onChange={handleChange} placeholder="Phone*" name='phone' required />
