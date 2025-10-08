@@ -12,9 +12,6 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
 function App() {
-  const [isChecked, setIsChecked] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(true);
-
   return (
     <Container>
       <Navbar
@@ -22,8 +19,6 @@ function App() {
         links={[
           { label: "Home", href: "/" },
           { label: "Menu", href: "/concept" },
-          // { label: "Meal Plans", href: "#" },
-          // { label: "How It Works", href: "#" },
           { label: "About Us", href: "/about" },
           { label: "Contact Us", href: "/contact" },
         ]}
@@ -40,8 +35,6 @@ function App() {
         links={[
           { label: "Home", href: "/" },
           { label: "Menu", href: "/concept" },
-          // { label: "Meal Plans", href: "#" },
-          // { label: "How It Works", href: "#" },
           { label: "About Us", href: "/about" },
           { label: "Contact Us", href: "contact" },
         ]}
