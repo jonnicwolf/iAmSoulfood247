@@ -33,7 +33,7 @@ const ContactForm = () => {
 
   return (
     <Form ref={form} onSubmit={(e) => {
-        sendEmail(e,form);
+        sendEmail(e,form, 'template_2dbzpp9');
         clearForm();
       }}>
       <Text content="CONTACT US" textSize="xxxl" center />

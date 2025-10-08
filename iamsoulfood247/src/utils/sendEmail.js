@@ -1,12 +1,12 @@
 import emailjs from 'emailjs-com';
 
-export const sendEmail = (e, form) => {
+export const sendEmail = (e, form, template) => {
   e.preventDefault();
 
   emailjs
     .sendForm(
       "service_df591pp",
-      "template_2dbzpp9",
+      template,
       form.current,
       "p1Pm1Q0_4BJ-G3HYU"
     )

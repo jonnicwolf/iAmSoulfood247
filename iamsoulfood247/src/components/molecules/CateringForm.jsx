@@ -56,7 +56,7 @@ const CateringForm = () => {
 
   return (
     <Form ref={form} onSubmit={(e)=>{
-        sendEmail(e, form);
+        sendEmail(e, form, 'template_9zxn0jo');
         clearForm();
       }}>
       <Text content="CATERING INQUIRY" textSize="xxxl" />
