@@ -56,6 +56,12 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  height: auto;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+    width: 90vw;
+  }
 `;
 
 const TextArea = styled.textarea`

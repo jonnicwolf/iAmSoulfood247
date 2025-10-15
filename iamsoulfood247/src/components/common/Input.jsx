@@ -45,6 +45,10 @@ const StyledInput = styled.input`
       ${({ theme, hasError }) =>
         hasError ? "rgba(220, 20, 60, 0.3)" : "rgba(249, 115, 22, 0.3)"};
   }
+
+  @media (max-width: 768px) {
+    widht: 100%;
+  }
 `;
 
 const Error = styled.span`

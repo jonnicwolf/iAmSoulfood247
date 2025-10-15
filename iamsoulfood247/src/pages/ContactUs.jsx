@@ -39,4 +39,9 @@ const HeroText = styled.div`
   font-size: ${({ theme }) => theme.fontSize.xxx_xl};
   color: ${({ theme }) => theme.colors.surface};
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    top: 20%;
+    font-size: ${({ theme }) => theme.fontSize.xxxl};
+  }
 `;
