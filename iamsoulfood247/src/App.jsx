@@ -24,7 +24,7 @@ function App() {
           { label: "Menu", href: "/concept" },
           // { label: "Meal Plans", href: "#" },
           // { label: "How It Works", href: "#" },
-          { label: "About Us", href: "/about" },
+          { label: "About", href: "/about" },
           { label: "Contact Us", href: "/contact" },
         ]}
         rightContent={[{ label: "Login" }, { label: "Sign Up" }]}
