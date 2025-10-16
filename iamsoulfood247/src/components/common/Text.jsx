@@ -3,12 +3,13 @@ import styled from "styled-components";
 const Text = ({
   content,
   textSize = 'md',
+  s_textSize = 'sm',
   bold = false,
   color = 'text'
   }) => {
   return (
     <Wrapper>
-      <Content textSize={textSize} bold={bold} color={color}>{content}</Content>
+      <Content textSize={textSize} s_textSize={s_textSize} bold={bold} color={color}>{content}</Content>
     </Wrapper>
   );
 };
@@ -27,6 +28,6 @@ const Content = styled.p`
   color: ${({ theme, color }) => theme.colors[color] ? theme.colors[color] : theme.colors.text};
 
   @media (max-width: 768px) {
-    font-size: ${({ theme, textSize }) => theme.fontSize.xxl};
+    font-size: ${({ theme, s_textSize }) => theme.fontSize[s_textSize] ? theme.fontSize[s_textSize] : theme.fontSize.sm};
   }
 `;

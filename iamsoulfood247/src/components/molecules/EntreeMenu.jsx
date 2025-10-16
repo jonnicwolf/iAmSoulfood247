@@ -127,7 +127,7 @@ const EntreeMenu = () => {
       />
       <Card
         title="VEGAN SOUL BOWL"
-        style={{ boxShadow: 'none', borderBottom: '1px solid #000' }}
+        style={{ boxShadow: 'none' }}
         children={
           <>
             <Text
