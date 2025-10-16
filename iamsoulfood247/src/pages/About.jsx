@@ -35,6 +35,7 @@ const About = () => {
       
       <Card
         title={"OUR TEAM"}
+        size='xxx_xl'
         style={{ boxShadow: 'none' }}
         children={
           <TeamWrapper>
@@ -42,33 +43,7 @@ const About = () => {
               title={'EXECUTIVE CHEF'}
               children={
                 <img
-                  src="https://www.dl.dropboxusercontent.com/scl/fi/fgpmw2xtvhubcdwv1na9j/headshot.jpg?rlkey=khgpa4kexzmu0m25yzioat11k&st=s8i698d5&dl=0"
-                  alt="headshot"
-                  style={{ width: '400px' }}
-                  />}
-              footer={
-                <Text
-                  content={'JAY HART'}
-                  textSize="xl" />}
-              center />
-            <Card
-              title={'EXECUTIVE CHEF'}
-              children={
-                <img
-                  src="https://www.dl.dropboxusercontent.com/scl/fi/fgpmw2xtvhubcdwv1na9j/headshot.jpg?rlkey=khgpa4kexzmu0m25yzioat11k&st=s8i698d5&dl=0"
-                  alt="headshot"
-                  style={{ width: '400px' }}
-                  />}
-              footer={
-                <Text
-                  content={'JAY HART'}
-                  textSize="xl" />}
-              center />
-            <Card
-              title={'EXECUTIVE CHEF'}
-              children={
-                <img
-                  src="https://www.dl.dropboxusercontent.com/scl/fi/fgpmw2xtvhubcdwv1na9j/headshot.jpg?rlkey=khgpa4kexzmu0m25yzioat11k&st=s8i698d5&dl=0"
+                  src="https://www.dl.dropboxusercontent.com/scl/fi/p4zeblz2q2tpj16o40ck5/ChefJay.jpeg?rlkey=v5ingxsl6ufxb2p56ht9gndn2&st=67mk717n&dl=0"
                   alt="headshot"
                   style={{ width: '400px' }}
                   />}
