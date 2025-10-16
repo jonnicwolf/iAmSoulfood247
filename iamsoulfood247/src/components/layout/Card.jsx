@@ -34,6 +34,10 @@ const CardHeader = styled.h3`
   font-weight: 600;
   color: ${({ theme }) => theme.colors.text};
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.xxl};
+  }
 `;
 
 const CardBody = styled.div`

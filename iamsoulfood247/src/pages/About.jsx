@@ -18,6 +18,7 @@ const About = () => {
       <Card
         title="OUR STORY"
         size='xxx_xl'
+        style={{ boxShadow: 'none' }}
         children={
           <Text
             content={"iAmSoulfood247 was founded with a passion for bringing the rich, comforting flavors of soul food to a wider audience. Our journey began in a small kitchen, where we experimented with traditional recipes passed down through generations, infusing them with a modern twist to cater to contemporary tastes. We believe that soul food is more than just a cuisine; it's a celebration of culture, community, and togetherness. Our mission is to make soul food accessible to everyone, offering delicious, healthy options that nourish both the body and soul. At iAmSoulfood247, we are committed to quality, authenticity, and exceptional service, ensuring that every meal we serve is a memorable experience."}
@@ -34,6 +35,7 @@ const About = () => {
       
       <Card
         title={"OUR TEAM"}
+        style={{ boxShadow: 'none' }}
         children={
           <TeamWrapper>
             <Card
@@ -97,6 +99,11 @@ const HeroText = styled.div`
   font-size: ${({ theme }) => theme.fontSize.xxx_xl};
   color: ${({ theme }) => theme.colors.surface};
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.xxxl};
+    top: 20%;
+  }
 `;
 
 const TeamWrapper = styled.div`
