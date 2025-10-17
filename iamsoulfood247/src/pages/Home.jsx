@@ -135,6 +135,28 @@ const ConceptContent = styled(Content)`
 `;
 
 const Img = styled.img`
-  width: 800px;
-  height: 800px;
+  height: 40vh;
+  width: 40vw;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+`;
+
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  max-width: 40%;
+  @media (max-width: 768px) {
+    text-align: center;
+    max-width: 100%;
+    gap: 2rem;
+  }
 `;
