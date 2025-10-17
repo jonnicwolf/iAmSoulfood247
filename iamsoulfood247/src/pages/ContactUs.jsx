@@ -7,7 +7,7 @@ const ContactUs = () => {
     <PageWrapper>
       <Content>
         <img
-          src="https://www.dl.dropboxusercontent.com/scl/fi/4d89cin22y9u5ssmrjns6/contantUs.jpg?rlkey=0v9da8jyuarg2wpq2y7jm1j2u&st=gqw1h0qc&dl=0" 
+          src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664789/contantUs_ili1jn.jpg" 
           alt=""
           style={{ width: '100vw' }} />
         <HeroText>CONTACT</HeroText>
