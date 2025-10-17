@@ -9,7 +9,7 @@ const About = () => {
     <>
       <Content>
         <img
-          src="https://www.dl.dropboxusercontent.com/scl/fi/riqx9f14jygur5je8iya2/chef_team.jpg?rlkey=xl0jqthd0zixcj6nfqj8c2zw1&st=10n24lg0&dl=0"
+          src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/chef_team_c58eep.jpg"
           alt="chef_team_about_us"
           style={{ width: "100vw", }} />
         <HeroText>ABOUT US</HeroText>
@@ -43,7 +43,7 @@ const About = () => {
               title={'EXECUTIVE CHEF'}
               children={
                 <img
-                  src="https://www.dl.dropboxusercontent.com/scl/fi/p4zeblz2q2tpj16o40ck5/ChefJay.jpeg?rlkey=v5ingxsl6ufxb2p56ht9gndn2&st=67mk717n&dl=0"
+                  src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664789/ChefJay_xxp6ih.jpg"
                   alt="headshot"
                   style={{ width: '400px' }}
                   />}
