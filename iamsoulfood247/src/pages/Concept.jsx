@@ -10,7 +10,7 @@ const Concept = () => {
     <>
       <div>
         <img
-          src="https://dl.dropboxusercontent.com/scl/fi/3ilmsg6l846rdnj3mbupl/chef.jpg?rlkey=4hs6ae39yfa7ltwv3cj7ucuia&st=84yha5j7"
+          src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664789/chef_cspgzy.jpg"
           alt=""
           style={{
             width: "100vw",
