@@ -18,6 +18,7 @@ const About = () => {
       <Card
         title="OUR STORY"
         size='xxx_xl'
+        style={{ boxShadow: 'none' }}
         children={
           <Text
             content={"iAmSoulfood247 was founded with a passion for bringing the rich, comforting flavors of soul food to a wider audience. Our journey began in a small kitchen, where we experimented with traditional recipes passed down through generations, infusing them with a modern twist to cater to contemporary tastes. We believe that soul food is more than just a cuisine; it's a celebration of culture, community, and togetherness. Our mission is to make soul food accessible to everyone, offering delicious, healthy options that nourish both the body and soul. At iAmSoulfood247, we are committed to quality, authenticity, and exceptional service, ensuring that every meal we serve is a memorable experience."}
@@ -34,39 +35,15 @@ const About = () => {
       
       <Card
         title={"OUR TEAM"}
+        size='xxx_xl'
+        style={{ boxShadow: 'none' }}
         children={
           <TeamWrapper>
             <Card
               title={'EXECUTIVE CHEF'}
               children={
                 <img
-                  src="https://www.dl.dropboxusercontent.com/scl/fi/fgpmw2xtvhubcdwv1na9j/headshot.jpg?rlkey=khgpa4kexzmu0m25yzioat11k&st=s8i698d5&dl=0"
-                  alt="headshot"
-                  style={{ width: '400px' }}
-                  />}
-              footer={
-                <Text
-                  content={'JAY HART'}
-                  textSize="xl" />}
-              center />
-            <Card
-              title={'EXECUTIVE CHEF'}
-              children={
-                <img
-                  src="https://www.dl.dropboxusercontent.com/scl/fi/fgpmw2xtvhubcdwv1na9j/headshot.jpg?rlkey=khgpa4kexzmu0m25yzioat11k&st=s8i698d5&dl=0"
-                  alt="headshot"
-                  style={{ width: '400px' }}
-                  />}
-              footer={
-                <Text
-                  content={'JAY HART'}
-                  textSize="xl" />}
-              center />
-            <Card
-              title={'EXECUTIVE CHEF'}
-              children={
-                <img
-                  src="https://www.dl.dropboxusercontent.com/scl/fi/fgpmw2xtvhubcdwv1na9j/headshot.jpg?rlkey=khgpa4kexzmu0m25yzioat11k&st=s8i698d5&dl=0"
+                  src="https://www.dl.dropboxusercontent.com/scl/fi/p4zeblz2q2tpj16o40ck5/ChefJay.jpeg?rlkey=v5ingxsl6ufxb2p56ht9gndn2&st=67mk717n&dl=0"
                   alt="headshot"
                   style={{ width: '400px' }}
                   />}
@@ -97,6 +74,11 @@ const HeroText = styled.div`
   font-size: ${({ theme }) => theme.fontSize.xxx_xl};
   color: ${({ theme }) => theme.colors.surface};
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.xxxl};
+    top: 20%;
+  }
 `;
 
 const TeamWrapper = styled.div`

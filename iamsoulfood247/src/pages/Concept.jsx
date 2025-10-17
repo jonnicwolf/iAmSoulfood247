@@ -20,7 +20,7 @@ const Concept = () => {
         </HeroText>
       </div>
       <Content>
-        <h1>IAMSOULFOOD247'S AUTHENTIC SOUL FOOD</h1>
+        <ContentHeader>IAMSOULFOOD247'S AUTHENTIC SOUL FOOD</ContentHeader>
         <Text
           content={"Bring soulful flavor to your next event with iAmSoulfood247’s authentic catering! Our table offerings are hearty, fresh, and served with the warmth and hospitality you deserve. From business luncheons to family gatherings, or simply treating your team to a meal that feels like home. We offer a range of dishes that satisfy every palate. Choose from our savory starters, wholesome entrées, and signature soul food favorites that celebrate tradition while keeping health in mind. Every bite is rich in flavor and crafted with care, and you can complete your catering experience with our comforting, indulgent desserts. Let us take the stress out of planning and feeding a crowd—our family-owned business is here to make your next catering experience delicious, memorable, and affordable."}
           textSize="lg"
@@ -43,8 +43,8 @@ const Concept = () => {
       </Content>
 
       <Menu>
+        <MenuHeader>ENTRÉES</MenuHeader>
         <MenuGrid>
-          <MenuHeader>ENTRÉES</MenuHeader>
           <EntreeMenu />
         </MenuGrid>
       </Menu>
@@ -63,6 +63,11 @@ const HeroText = styled.div`
   font-size: ${({ theme }) => theme.fontSize.xxx_xl};
   color: ${({ theme }) => theme.colors.surface};
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    top: 20%;
+    font-size: ${({ theme }) => theme.fontSize.xxl};
+  }
 `;
 
 const Content = styled.div`
@@ -74,30 +79,40 @@ const Content = styled.div`
   padding: ${({ theme }) => theme.spacing.lg};
 `;
 
+const ContentHeader = styled.h1`
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+    text-align: center;
+  }
+`;
+
 const Menu = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: ${({ theme }) => theme.spacing.lg};
   background-color: ${({ theme }) => theme.colors.textLight};
   width: 100%;
 `;
 
 const MenuHeader = styled.h2`
-  grid-column: 1 / -1;
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
-  margin-top: ${({ theme }) => theme.spacing.lg};
+  background-color: ${({ theme }) => theme.colors.surface};
   text-align: center;
   font-size: ${({ theme }) => theme.fontSize.xxxl};
   color: ${({ theme }) => theme.colors.textLight};
   font-weight: bold;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.textLight};
-  padding-bottom: ${({ theme }) => theme.spacing.md};
+  width: 100%;
 `;
-
 
 const MenuGrid = styled.div`
   background-color: ${({ theme }) => theme.colors.surface};
   box-shadow: ${({ theme }) => theme.shadows.md};
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: ${({ theme }) => theme.spacing.lg} auto;
-  max-width: 90vw;
-  padding: ${({ theme }) => theme.spacing.lg};
+  justify-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
