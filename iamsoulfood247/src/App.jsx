@@ -15,7 +15,7 @@ function App() {
   return (
     <Container>
       <Navbar
-        logo={"https://dl.dropboxusercontent.com/scl/fi/5761osx5w55gqeakjwjlw/iAmSoulfood247_logo.png?rlkey=hw7vcgy24mfj9712wdgu16oqf&st=qxjum5u0"}
+        logo={"https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/iAmSoulfood247_logo_snbl2x.png"}
         links={[
           { label: "Home", href: "/" },
           { label: "Menu", href: "/concept" },

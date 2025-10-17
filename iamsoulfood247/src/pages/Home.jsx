@@ -10,7 +10,7 @@ const Home = () => {
       <Card center style={{ boxShadow: 'none', margin: '2rem 0 0 0' }}>
         <TitleContent>
           <img
-            src="https://dl.dropboxusercontent.com/scl/fi/5761osx5w55gqeakjwjlw/iAmSoulfood247_logo.png?rlkey=hw7vcgy24mfj9712wdgu16oqf&st=qxjum5u0"
+            src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/iAmSoulfood247_logo_snbl2x.png"
             alt="iAmSoulfood247 Logo"
             style={{ width: "400px", marginBottom: "20px" }}
             />
@@ -38,7 +38,7 @@ const Home = () => {
               backgroundColor="surface" />
           </TextWrapper>
           <Img
-            src="https://dl.dropboxusercontent.com/scl/fi/jt7zghw8189lio026no70/soulfood.jpg?rlkey=ww72w9lurnz692r53volvt77p&st=0msnug71"
+            src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/soulfood_gpheff.jpg"
             alt=""
             />
         </ConceptContent>
@@ -62,7 +62,7 @@ const Home = () => {
               backgroundColor="surface" />
           </TextWrapper>
           <Img
-            src="https://dl.dropboxusercontent.com/scl/fi/jevkllqaur7xrgkizv4ij/catering.jpg?rlkey=ss7svgetibrf8lrwi514e7zsp&st=chhe2cpw"
+            src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664789/catering_v59dee.jpg"
             alt=""
             />
         </ConceptContent>
@@ -86,7 +86,7 @@ const Home = () => {
               backgroundColor="surface" />
           </TextWrapper>
           <Img
-            src="https://dl.dropboxusercontent.com/scl/fi/ekl4xx8i8pq7hdtn5zpwi/mealPlan.jpg?rlkey=e93b1s5ysl1t3wabkfcvii1ps&st=qto52op8"
+            src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/mealPlan_rw79bd.jpg"
             alt=""
             />
         </ConceptContent>
