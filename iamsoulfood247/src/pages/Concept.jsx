@@ -35,6 +35,7 @@ const Concept = () => {
           center
           />
         <Button
+          onClick={()=> alert("PDF Menu coming soon!")}
           name={"VIEW OUR PDF MENU"}
           border
           color="surface"

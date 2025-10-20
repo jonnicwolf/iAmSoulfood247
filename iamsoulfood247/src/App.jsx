@@ -22,7 +22,7 @@ function App() {
           { label: "About Us", href: "/about" },
           { label: "Contact Us", href: "/contact" },
         ]}
-        rightContent={[{ label: "Login" }, { label: "Sign Up" }]}
+        // rightContent={[{ label: "Login" }, { label: "Sign Up" }]}
       />
       <Routes>
         <Route index path="/" element={<Home />} />

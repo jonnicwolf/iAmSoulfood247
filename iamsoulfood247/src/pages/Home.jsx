@@ -78,6 +78,9 @@ const Home = () => {
               color="surface"
               />
             <LinkButton
+              onClick={() => {
+                alert('Meal Plans coming soon!');
+              }}
               to="/concept"
               name={"EXPLORE MEAL PLANS"}
               border
