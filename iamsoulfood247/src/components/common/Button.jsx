@@ -6,9 +6,10 @@ const Button = ({
   isnavbutton = false,
   color = "white",
   backgroundColor = 'transparent',
+  ...props
 }) => {
   return (
-    <ButtonStyled border={border} isnavbutton={isnavbutton} color={color} backgroundColor={backgroundColor}>{name}</ButtonStyled>
+    <ButtonStyled border={border} isnavbutton={isnavbutton} color={color} backgroundColor={backgroundColor} {...props}>{name}</ButtonStyled>
   );
 };
 

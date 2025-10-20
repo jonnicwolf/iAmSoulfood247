@@ -1,7 +1,7 @@
 import Button from "./Button";
 import { Link } from "react-router-dom";
 
-const LinkButton = ({to, name, border, isnavbutton, color, backgroundColor}) => {
+const LinkButton = ({to, name, border, isnavbutton, color, backgroundColor, ...props}) => {
   return (
     <Link to={to}>
       <Button
@@ -10,6 +10,7 @@ const LinkButton = ({to, name, border, isnavbutton, color, backgroundColor}) => 
         isnavbutton={isnavbutton}
         color={color}
         backgroundColor={backgroundColor}
+        {...props}
       />
     </Link>
   );
