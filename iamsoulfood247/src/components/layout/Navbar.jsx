@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
-import Button from "../common/Button";
-
-const Navbar = ({ logo, links = [], rightContent = [] }) => {
+const Navbar = ({ logo, }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const dropMenuItems = [
@@ -66,14 +64,16 @@ const Navbar = ({ logo, links = [], rightContent = [] }) => {
           </BurgerButton>
         </RightContentWrapper>
       </NavRow1>
-      <NavRow2>
-        {dropMenuItems.map(item =>
-          <DropMenuItemButton title={item.title}>
-            {item.icon}
-            {item.description}
-          </DropMenuItemButton>
-        )}
-      </NavRow2>
+      { menuOpen &&
+        <NavRow2>
+          {dropMenuItems.map(item =>
+            <DropMenuItemButton title={item.title}>
+              {item.icon}
+              {item.description}
+            </DropMenuItemButton>
+          )}
+        </NavRow2>
+      }
     </Nav>
   );
 };

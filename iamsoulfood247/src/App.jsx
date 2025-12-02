@@ -16,13 +16,6 @@ function App() {
     <Container>
       <Navbar
         logo={"https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/iAmSoulfood247_logo_snbl2x.png"}
-        links={[
-          { label: "Home", href: "/" },
-          { label: "Menu", href: "/concept" },
-          { label: "About Us", href: "/about" },
-          { label: "Contact Us", href: "/contact" },
-        ]}
-        // rightContent={[{ label: "Login" }, { label: "Sign Up" }]}
       />
       <Routes>
         <Route index path="/" element={<Home />} />
