@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import { Routes, Route } from "react-router-dom";
 
@@ -7,6 +6,7 @@ import Concept from "./pages/Concept";
 import Catering from "./pages/Catering";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
+import Test from "./pages/Test";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -30,6 +30,7 @@ function App() {
         <Route path="/catering" element={<Catering />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
       <Footer
         links={[
