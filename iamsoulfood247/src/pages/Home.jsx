@@ -64,91 +64,80 @@ const Home = () => {
         </WelcomeContainer>
       </GridStack>
 
-        {/* <TitleContent>
-          <img
-            src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/iAmSoulfood247_logo_snbl2x.png"
-            alt="iAmSoulfood247 Logo"
-            style={{ width: "400px", marginBottom: "20px" }}
-            />
-          <Text
-            content={"IAMSOULFOOD247.COM"}
-            textSize="xxl"
-            bold />
-        </TitleContent> */}
-
-      {/* <ContentCard>
-        <ConceptContent>
-          <TextWrapper>
-            <Text content={"OUR CONCEPT"} textSize="xxl" color="surface" bold />
-            <Text
-              content={"iAmSoulfood247 2 Go aims to revolutionize the meal prep industry by offering delicious, healthy soul food options that cater to busy individuals seeking nutritious meals without sacrificing flavor. Our mission is to make soul food accessible, affordable, and health-conscious, promoting a balanced lifestyle while celebrating the rich culinary heritage of soul food."}
-              textSize="lg"
-              color="surface" />
-            <LinkButton
-              to="/concept"
-              name={"MORE ABOUT US"}
-              border
-              isnavbutton
-              color="textLight"
-              backgroundColor="surface" />
-          </TextWrapper>
-          <Img
-            src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/soulfood_gpheff.jpg"
-            alt=""
-            />
-        </ConceptContent>
-      </ContentCard>
- 
-      <ContentCard>
-        <ConceptContent flip>
-          <TextWrapper>
-            <Text content={"LET US CATER"} textSize="xxl" color="surface" bold/>
-            <Text
-              content={"iAmSoulfood247 Catering brings the heart of soulful cooking to your gatherings, combining rich flavors with health-conscious preparation. Whether it’s a corporate lunch, family celebration, or large-scale event, we deliver meals that are both comforting and nourishing. Our goal is to make authentic soul food accessible and memorable for every occasion—celebrating tradition while supporting modern lifestyles."}
-              textSize="lg"
-              color="surface"
+      <section>
+        <Content>
+          <Card
+            title={
+              <SquareBackground>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-truck-icon lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+              </SquareBackground>
+            }
+            size='lg'
+            children={
+              <Text
+              content='Fast Delivery'
+              s_textSize='md'
+              bold
               />
-            <LinkButton
-              to="/catering"
-              name={"WHAT WE OFFER"}
-              border
-              isnavbutton
-              color="textLight"
-              backgroundColor="surface" />
-          </TextWrapper>
-          <Img
-            src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664789/catering_v59dee.jpg"
-            alt=""
-            />
-        </ConceptContent>
-      </ContentCard>
-
-      <ContentCard>
-        <ConceptContent>
-          <TextWrapper>
-            <Text content={"MEAL PLANS"} textSize="xxl" color="surface" bold/>
-            <Text
-              content={"iAmSoulfood247 Meal Plans are designed for busy individuals who want soulful flavor without compromising health or convenience. Our rotating menus balance tradition with nutrition, offering portioned, ready-to-enjoy meals that fit seamlessly into your lifestyle. With flexible options to match your goals, we make eating well simple, affordable, and full of soul."}
-              textSize="lg"
-              color="surface"
+            }
+            footer='Hot & fresh to your door'
+            center
+          />
+          <Card
+            title={
+              <SquareBackground>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chef-hat-icon lucide-chef-hat"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>
+              </SquareBackground>
+            }
+            size='lg'
+            children={
+              <Text
+              content='Chef-Crafted'
+              s_textSize='md'
+              bold
               />
-            <LinkButton
-              onClick={() => {
-                alert('Meal Plans coming soon!');
-              }}
-              to="/concept"
-              name={"EXPLORE MEAL PLANS"}
-              border
-              isnavbutton
-              color="textLight"
-              backgroundColor="surface" />
-          </TextWrapper>
-          <Img
-            src="https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/mealPlan_rw79bd.jpg"
-            alt=""
-            />
-        </ConceptContent>
-      </ContentCard> */}
+            }
+            footer='Authenic recipes made with love'
+            center
+          />
+          <Card
+            title={
+              <SquareBackground>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-icon lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+              </SquareBackground>
+            }
+            size='lg'
+            children={
+              <Text
+              content='Meal Plans'
+              s_textSize='md'
+              bold
+              center={true}
+              />
+            }
+            footer='Subscribe & save on weekly meals'
+            center
+          />
+          <Card
+            title={
+              <SquareBackground>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf-icon lucide-leaf"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+              </SquareBackground>
+            }
+            size='lg'
+            children={
+              <Text
+                content='Plant Based'
+                s_textSize='md'
+                center
+                bold
+              />
+            }
+            footer='Delicious vegetarian & vegan options'
+            center
+          />
+        </Content>
+      </section>
     </PageWrapper>
   );
 };
@@ -198,12 +187,33 @@ const ButtonContainer = styled.div`
   gap: ${({ theme }) => theme.spacing.sm};
 `;
 
-// const Content = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   padding: 20px;
-// `;
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: ${({theme}) => theme.spacing.xl};
+  width: 90vw;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    padding-top: 0;
+    gap: ${({theme}) => theme.spacing.xl};
+  }
+`;
+
+const SquareBackground = styled.div`
+  border-radius: ${({theme}) => theme.radii.lg};
+  background: linear-gradient(
+    to left,
+    ${({theme}) => theme.colors.accent} 10%,
+    ${({theme}) => theme.colors.warning}  99%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+`;
 
 // const TitleContent = styled(Content)``;
 // const ContentCard = styled(Card)`
