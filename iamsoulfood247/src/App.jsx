@@ -29,8 +29,8 @@ function App() {
         links={[
           { label: "Home", href: "/" },
           { label: "Menu", href: "/concept" },
-          { label: "About Us", href: "/about" },
-          { label: "Contact Us", href: "contact" },
+          { label: "Meal Plans", href: "/about" },
+          { label: "Track Order", href: "/contact" },
         ]}
         copyright={"iAmSoulfood247"}
       />
