@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 const Card = ({ title, size = 'lg', borderRadius='lg', children, footer, center, ...props }) => {
   return (
-    <CardWrapper center={center} borderRadius={borderRadius}{...props}>
+    <CardWrapper center={center} borderRadius={borderRadius} {...props}>
       {title && <CardHeader size={size}>{title}</CardHeader>}
       <CardBody>{children}</CardBody>
-      {footer && <CardFooter>{footer}</CardFooter>}
+      {footer && <CardFooter center={center}>{footer}</CardFooter>}
     </CardWrapper>
   );
 };
@@ -15,17 +15,16 @@ export default Card;
 const CardWrapper = styled.div`
   background: ${({ theme }) => theme.colors.surface};
   border-radius: ${({ theme, borderRadius }) => theme.radii[borderRadius]};
-  box-shadow: ${({ theme }) => theme.shadows.md};
   padding: ${({ theme }) => theme.spacing.lg};
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.md};
+  gap: ${({ theme }) => theme.spacing.sm};
   align-items: ${props => (props.center ? 'center' : 'flex-start')};
   transition: box-shadow 0.2s ease;
   width: 100%;
 
   &:hover {
-    box-shadow: ${({ theme }) => theme.shadows.lg};
+    background: ${({theme}) => theme.colors.warning}50;
   }
 `;
 
@@ -47,9 +46,9 @@ const CardBody = styled.div`
 `;
 
 const CardFooter = styled.div`
-  margin-top: auto;
   font-size: ${({ theme }) => theme.fontSize.sm};
   color: ${({ theme }) => theme.colors.text};
   border-top: 1px solid ${({ theme }) => theme.colors.background};
-  padding-top: ${({ theme }) => theme.spacing.sm};
+  text-align: ${({ center }) => center ? 'center' : 'left'}
 `;
+ 

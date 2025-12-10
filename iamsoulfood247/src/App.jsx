@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import { Routes, Route } from "react-router-dom";
 
@@ -7,6 +6,7 @@ import Concept from "./pages/Concept";
 import Catering from "./pages/Catering";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
+import Test from "./pages/Test";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -16,13 +16,6 @@ function App() {
     <Container>
       <Navbar
         logo={"https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/iAmSoulfood247_logo_snbl2x.png"}
-        links={[
-          { label: "Home", href: "/" },
-          { label: "Menu", href: "/concept" },
-          { label: "About Us", href: "/about" },
-          { label: "Contact Us", href: "/contact" },
-        ]}
-        // rightContent={[{ label: "Login" }, { label: "Sign Up" }]}
       />
       <Routes>
         <Route index path="/" element={<Home />} />
@@ -30,6 +23,7 @@ function App() {
         <Route path="/catering" element={<Catering />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
       <Footer
         links={[
