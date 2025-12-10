@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Card = ({ title, size = 'lg', borderRadius='lg', children, footer, center, ...props }) => {
   return (
-    <CardWrapper center={center} borderRadius={borderRadius}{...props}>
+    <CardWrapper center={center} borderRadius={borderRadius} {...props}>
       {title && <CardHeader size={size}>{title}</CardHeader>}
       <CardBody>{children}</CardBody>
       {footer && <CardFooter center={center}>{footer}</CardFooter>}
@@ -51,3 +51,4 @@ const CardFooter = styled.div`
   border-top: 1px solid ${({ theme }) => theme.colors.background};
   text-align: ${({ center }) => center ? 'center' : 'left'}
 `;
+ 

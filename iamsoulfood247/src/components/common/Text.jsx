@@ -19,11 +19,13 @@ const Text = ({
 export default Text;
 
 const Wrapper = styled.div`
-  max-width: 800px;
+  // max-width: 800px;
+  width: 100%;
 `;
 
-const TextContent = styled.p`
-  text-align: ${({center}) => center ? 'center' : 'left'};
+const TextContent = styled.div`
+  width: 100%;
+  text-align: ${({center}) => center ? 'center' : null};
   font-size: ${({ theme, textSize }) => theme.fontSize[textSize]};
   font-weight: ${({ bold }) => (bold ? "800" : "normal")};
   color: ${({ theme, color }) => theme.colors[color] ? theme.colors[color] : theme.colors.text};

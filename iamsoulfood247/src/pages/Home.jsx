@@ -16,7 +16,7 @@ const Home = () => {
             content='Welcome to iAmSoulfood247'
             textSize='xxl'
             s_textSize='lg'
-            center={false}
+            center
             bold
             color='warning'
           />
@@ -24,7 +24,7 @@ const Home = () => {
             content='Soul Food.'
             textSize='xxx_xl'
             s_textSize='xxxl'
-            center={false}
+            center
             bold
             color='background'
           />
@@ -32,7 +32,7 @@ const Home = () => {
             content='Delivered Fresh.'
             textSize='xxxl'
             s_textSize='xxl'
-            center={false}
+            center
             bold
             color='warning'
           />
@@ -47,14 +47,14 @@ const Home = () => {
 
           <ButtonContainer>
             <Button
-              name='Order now!'
+              name='Order Now!'
               border
               isnavbutton={false}
               color='text'
               backgroundColor='primary'
             />
             <Button
-              name='Plan a catering event'
+              name='Cater Us!'
               border
               isnavbutton={false}
               color='text'
@@ -138,6 +138,91 @@ const Home = () => {
           />
         </Content>
       </section>
+
+      <section>
+        <h1 style={{textAlign: 'center'}}>Explore Our Menu</h1>
+        <Text
+          content='From soul food classics to plant-based delights'
+          textSize='xl'
+          s_textSize='lg'
+          center
+        />
+
+        <ExploreMenuContainer>
+          <SquareWrap color='accent'>
+            <GridStack>
+              <Img
+                src='https://iamsoulfood247.s3.us-east-2.amazonaws.com/iAmSoulfood247+(1)/bbq.jpg'
+              />
+              <GridStackContent>
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-drumstick-icon lucide-drumstick"><path d="M15.4 15.63a7.875 6 135 1 1 6.23-6.23 4.5 3.43 135 0 0-6.23 6.23"/><path d="m8.29 12.71-2.6 2.6a2.5 2.5 0 1 0-1.65 4.65A2.5 2.5 0 1 0 8.7 18.3l2.59-2.59"/></svg>
+                <Text
+                  content='Soul Food'
+                  textSize='xxl'
+                  s_textSize='xl'
+                  color='surface'
+                  center
+                  bold
+                />
+              </GridStackContent>
+            </GridStack>
+          </SquareWrap>
+          <SquareWrap color='primary'>
+            <GridStack>
+              <Img
+                src='https://iamsoulfood247.s3.us-east-2.amazonaws.com/iAmSoulfood247+(1)/salad.jpg'
+              />
+              <GridStackContent>
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf-icon lucide-leaf"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                <Text
+                  content='Plant-Based'
+                  textSize='xxl'
+                  s_textSize='xl'
+                  color='surface'
+                  center
+                  bold
+                />
+              </GridStackContent>
+            </GridStack>
+          </SquareWrap>
+          <SquareWrap color='accent'>
+            <GridStack>
+              <Img
+                src='https://iamsoulfood247.s3.us-east-2.amazonaws.com/iAmSoulfood247+(1)/hibachi.jpg'
+              />
+              <GridStackContent>
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame-icon lucide-flame"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg>
+                <Text
+                  content='Hibachi'
+                  textSize='xxl'
+                  s_textSize='xxl'
+                  color='surface'
+                  center
+                  bold
+                />
+              </GridStackContent>
+            </GridStack>
+          </SquareWrap>
+          <SquareWrap color='secondary'>
+            <GridStack>
+              <Img
+                src='https://iamsoulfood247.s3.us-east-2.amazonaws.com/iAmSoulfood247+(1)/sushi.jpg'
+              />
+              <GridStackContent>
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fish-icon lucide-fish"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"/><path d="M18 12v.5"/><path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"/><path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"/><path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"/><path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"/></svg>
+                <Text
+                  content='Sushi'
+                  textSize='xxl'
+                  s_textSize='xxl'
+                  color='surface'
+                  center
+                  bold
+                />
+              </GridStackContent>
+            </GridStack>
+          </SquareWrap>
+        </ExploreMenuContainer>
+      </section>
     </PageWrapper>
   );
 };
@@ -156,7 +241,7 @@ const PageWrapper = styled.div`
 `;
 const Img = styled.img`
   grid-area: 1 / 1;
-  width: 100vw;
+  width: 100%;
   z-index: 0;
   opacity: 0.8;
   object-fit: fill;
@@ -181,6 +266,10 @@ const WelcomeContainer = styled.div`
     ${({ theme }) => `${theme.colors.text}90`} 30%,
     rgba(0,0,0,0.1) 90%
   );
+  
+  @media (min-width: 900px) {
+    padding: 2rem;
+  }
 `;
 const ButtonContainer = styled.div`
   display: flex;
@@ -215,48 +304,34 @@ const SquareBackground = styled.div`
   width: 60px;
 `;
 
-// const TitleContent = styled(Content)``;
-// const ContentCard = styled(Card)`
-//   box-shadow: none;
-// `;
+const ExploreMenuContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 
-// const ConceptContent = styled(Content)`
-//   background: ${({ theme }) => theme.colors.textLight};
-//   display: flex;
-//   flex-direction: ${({ flip }) => (flip ? 'row-reverse' : 'row')};
-//   justify-content: space-around;
-//   align-items: center;
-//   padding: 55px;
+  @media (min-width: 900px) {
+    flex-direction: row;
+    padding-top: 0;
+    gap: ${({theme}) => theme.spacing.xl};
+  }
+`;
+const GridStackContent = styled.div`
+  grid-area: 1/1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-//   @media (max-width: 768px) {
-//     flex-direction: column-reverse !important;
-//     padding: 20px;
-//   }
-// `;
+  @media (min-width: 900px) {
+  }
+`;
+const SquareWrap = styled.div`
+  border-radius: ${({theme}) => theme.radii.lg};
+  overflow: hidden;
+  background: ${({ theme, color }) => `${theme.colors[color]}`};
+  margin-top: 2rem;
+`;
 
-// const Img = styled.img`
-//   height: 40vh;
-//   width: 40vw;
-//   height: auto;
-//   border-radius: 1rem;
-//   object-fit: cover;
-//   @media (max-width: 768px) {
-//     width: 100%;
-//     height: auto;
-//     margin-bottom: 2rem;
-//   }
-// `;
-
-// const TextWrapper = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-//   gap: 5rem;
-//   max-width: 40%;
-//   @media (max-width: 768px) {
-//     text-align: center;
-//     max-width: 100%;
-//     gap: 2rem;
-//   }
-// `;
