@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Text from '../components/common/Text';
 import Card from '../components/layout/Card';
 import Button from '../components/common/Button';
-import LinkButton from '../components/common/LinkButton';
-
 
 const Home = () => {
   return (
@@ -47,14 +45,14 @@ const Home = () => {
 
           <ButtonContainer>
             <Button
-              name='Order Now!'
+              name='Order Now'
               border
               isnavbutton={false}
               color='text'
               backgroundColor='primary'
             />
             <Button
-              name='Cater Us!'
+              name='Cater With Us'
               border
               isnavbutton={false}
               color='text'

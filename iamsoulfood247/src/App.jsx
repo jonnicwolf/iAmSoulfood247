@@ -15,7 +15,7 @@ function App() {
   return (
     <Container>
       <Navbar
-        logo={"https://res.cloudinary.com/dmxfzfj3z/image/upload/v1760664790/iAmSoulfood247_logo_snbl2x.png"}
+        logo={"https://iamsoulfood247.s3.us-east-2.amazonaws.com/iAmSoulfood247+(1)/iamsoulfood247-Logo.svg"}
       />
       <Routes>
         <Route index path="/" element={<Home />} />

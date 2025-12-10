@@ -81,11 +81,6 @@ const Container = styled.div`
   padding: ${({ theme }) => `${theme.spacing.lg} ${theme.spacing.md}`};
   gap: ${({ theme }) => theme.spacing.lg};
   width: 100%;
-
-  @media (min-width: 900px) {
-    // padding: 0;
-    // margin: 0;
-  }
 `;
 const Div1 = styled.div`
   @media (min-width: 900px) {

@@ -99,12 +99,19 @@ const NavRow1 = styled.div`
   justify-content: space-between;
 `;
 const NavRow2 = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(46,204,113, 0.8);
+  background: rgba(46,204,113, 0.5);
   justify-content: space-between;
   padding: ${({ theme }) => theme.spacing.sm};
+  z-index: 1000;
+  backdrop-filter: blur(10px)
 `;
 
 const LogoContainer = styled.div`
@@ -118,7 +125,7 @@ const LogoContainer = styled.div`
 const LogoTitle = styled.h2``;
 
 const Logo = styled.img`
-  height: 5rem;
+  height: 4rem;
   cursor: pointer;
 `;
 
