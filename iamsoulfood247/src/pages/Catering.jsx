@@ -3,28 +3,35 @@ import styled from "styled-components";
 import Card from '../components/layout/Card';
 import Text from '../components/common/Text';
 import CateringForm from "../components/molecules/CateringForm";
+import EventType from "../components/molecules/EventType";
 
 const Catering = () => {
   return (
     <PageWrapper>
-      <Content>
-        <img
-          src="https://www.dl.dropboxusercontent.com/scl/fi/b0zcubv54iod2mwmfu3d7/volodymyr-leush-sDvfA2ElW24-unsplash.jpg?rlkey=5wctji1pnndcpzbyokppzxkmj&st=b4nntiid&dl=0"
-          alt="catering_hero"
-          style={{ width: "100vw" }} />
-        <HeroText>CATERING</HeroText>
-      </Content>
-
-      <Card
-        title="GREAT FOOD AND GREAT SERVICE AT A GREAT PRICE"
-        size='xxl'
-        children={
-          <Text
-            content={"Let us bring the soulful flavors of iAmSoulfood247 to your next event! Our catering services are perfect for any occasion, whether it's a corporate gathering, family reunion, or special celebration. We offer a variety of delicious soul food dishes that are sure to satisfy every palate. From savory entrees to mouth-watering sides and decadent desserts, our menu is designed to impress. Let us take care of the food so you can focus on enjoying your event with friends and family. Contact us today to learn more about our catering options and to place your order!"}
-            textSize="lg" />
+      <Div1>
+        <Div2>
+          <svg
+          xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke='#f97316' strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+          <h1>AI Catering Wizard</h1>
+        </Div2>
+        <Text
+          content='Let our AI help you plan the perfect catering experince'
+          s_textSize="lg"
+          center
+        />
+      </Div1>
+      <FormCard
+        title={
+          <Div2>
+            <svg
+            xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke='#f97316' strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+            <h4>Event Type</h4>
+          </Div2>
         }
-        center />
-      <CateringForm />
+        children={
+          <EventType/>
+        }
+      />
     </PageWrapper>
   );
 };
@@ -36,18 +43,25 @@ const PageWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xl};
+  padding: ${({ theme }) => theme.spacing.md};
 `;
-
-const Content = styled.div`
+const Div1 = styled.div`
   display: flex;
   flex-direction: column;
+  padding: ${({ theme }) => theme.spacing.md};
+  gap: ${({ theme }) => theme.spacing.md};
+`;
+const Div2 = styled.div`
+  display: flex;
+  justify-content: center;
   align-items: center;
 `;
+const FormCard = styled(Card)`
+  border: 1px solid gray;
+  background: white;
+  padding: ${({ theme }) => theme.spacing.lg};
+  &:hover {
+    background: white;
+  }
+`
 
-const HeroText = styled.div`
-  position: absolute;
-  top: 50%;
-  font-size: ${({ theme }) => theme.fontSize.xxx_xl};
-  color: ${({ theme }) => theme.colors.surface};
-  font-weight: bold;
-`;
