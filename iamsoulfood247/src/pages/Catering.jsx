@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+import Button from '../components/common/Button';
 import Card from '../components/layout/Card';
 import Text from '../components/common/Text';
 import CateringForm from "../components/molecules/CateringForm";
@@ -55,6 +56,7 @@ const Div2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: ${({ theme }) => theme.spacing.sm};
 `;
 const FormCard = styled(Card)`
   border: 1px solid gray;
@@ -63,5 +65,16 @@ const FormCard = styled(Card)`
   &:hover {
     background: white;
   }
+`;
+const FooterContentWrap = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-top: ${({ theme }) => theme.spacing.md};
 `
+const ButtonContentWrap = styled.div`
+  display: flex;
+  align-items: center;
+  color: black;
+`;
 

@@ -19,18 +19,16 @@ const ButtonStyled = styled.button`
   background-color:${({ backgroundColor, theme }) => theme.colors[backgroundColor] || backgroundColor};
   color: ${({ color, theme }) => theme.colors[color] || color};
   cursor: pointer;
-  font-weight: ${({ isnavbutton }) => isnavbutton ? '600' : '500'};
+  font-weight: 500;
   font-size: ${({ theme }) => theme.fontSize.sm};
   padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.lg}`};
   transition: all 0.5s ease;
 
   &:hover {
-    background-color: ${({ isnavbutton, backgroundColor }) => isnavbutton ? '#000' : `${backgroundColor}`};
-    color: ${({ isnavbutton }) => isnavbutton ? '#fff' : '#000'};
-    letter-spacing: ${({ isnavbutton }) => isnavbutton ? '0' : '0.15rem'};
-    padding: ${({ theme, isnavbutton }) => isnavbutton
-      ? `${theme.spacing.sm} ${theme.spacing.lg}`
-      : `${theme.spacing.sm} ${theme.spacing.xl}`};
+    background-color: ${({ backgroundColor }) => backgroundColor ? '#000' : `${backgroundColor}`};
+    color: #000;
+    letter-spacing: 0.15rem;
+    padding: ${({ theme }) => `${theme.spacing.sm}, ${theme.spacing.xl}`};
   };
 `;
 

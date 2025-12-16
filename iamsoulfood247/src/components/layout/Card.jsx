@@ -49,6 +49,7 @@ const CardFooter = styled.div`
   font-size: ${({ theme }) => theme.fontSize.sm};
   color: ${({ theme }) => theme.colors.text};
   border-top: 1px solid ${({ theme }) => theme.colors.background};
-  text-align: ${({ center }) => center ? 'center' : 'left'}
+  text-align: ${({ center }) => center ? 'center' : 'left'};
+  width: 100%;
 `;
  
