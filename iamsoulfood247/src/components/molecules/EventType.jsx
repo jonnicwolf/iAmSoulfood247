@@ -146,7 +146,7 @@ const FooterContentWrap = styled.div`
   justify-content: space-between;
   margin-top: ${({ theme }) => theme.spacing.md};
   width: 100%;
-`
+`;
 const ButtonContentWrap = styled.div`
   display: flex;
   align-items: center;
