@@ -7,6 +7,7 @@ import Text from '../components/common/Text';
 import EventType from "../components/molecules/EventType";
 import GuestCount from '../components/molecules/GuestCount';
 import Theme from '../components/molecules/Theme';
+import DateTime from '../components/molecules/DateTime';
 
 const Catering = () => {
   const [step, setStep] = useState(0);
@@ -30,6 +31,12 @@ const Catering = () => {
               <h4>Theme</h4>
             </Title>,
       form: Theme,
+    },
+    {title: <Title>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-icon lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+              <h4>Date & Time</h4>
+            </Title>,
+      form: DateTime,
     },
   ];
 

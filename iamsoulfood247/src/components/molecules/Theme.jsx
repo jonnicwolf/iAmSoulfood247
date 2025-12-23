@@ -19,7 +19,8 @@ const Theme = ({ stepGetter, stepSetter }) => {
     navigate('/catering/dateTime');
   };
   const handleBackClick = () => {
-    navigate(-1);
+    stepSetter(stepGetter-1);
+    navigate('/catering/guestCount');
   };
 
   return (

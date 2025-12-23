@@ -24,7 +24,8 @@ const GuestCount = ({ stepGetter, stepSetter }) => {
     : setRestrictions(prev => prev.filter(item => item !== name));
   };
   const handleBackClick = () => {
-    navigate(-1);
+    stepSetter(stepGetter-1);
+    navigate('/catering/eventType');
   };
   const handleSubmit = (e) => {
     e.preventDefault();
