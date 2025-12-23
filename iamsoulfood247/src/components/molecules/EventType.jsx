@@ -1,17 +1,21 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Button from '../common/Button';
 
-const EventType = () => {
+const EventType = ({ stepSetter, stepGetter }) => {
   const [eventTitle, setEventTitle] = useState('');
   const [eventDescription, setEventDescription] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     sessionStorage.setItem('eventTitle', eventTitle);
     sessionStorage.setItem('eventDescription', eventDescription);
+    stepSetter(stepGetter+1);
+    navigate('/catering/guestcount');
   };
 
   return (
@@ -93,7 +97,7 @@ const EventType = () => {
         />
       </FooterContentWrap>
     </Container>
-  )
+  );
 };
 
 const Container = styled.form`

@@ -7,10 +7,9 @@ const Text = ({
   bold = false,
   color = 'text',
   center = false,
-  padding = 'sm'
   }) => {
   return (
-    <Wrapper padding={padding}>
+    <Wrapper>
       <TextContent center={center} textSize={textSize} s_textSize={s_textSize} bold={bold} color={color}>{content}</TextContent>
     </Wrapper>
   );

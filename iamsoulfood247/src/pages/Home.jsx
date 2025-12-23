@@ -80,6 +80,7 @@ const Home = () => {
             }
             footer='Hot & fresh to your door'
             center
+            align='center'
           />
           <Card
             title={
@@ -97,6 +98,7 @@ const Home = () => {
             }
             footer='Authenic recipes made with love'
             center
+            align='center'
           />
           <Card
             title={
@@ -115,6 +117,7 @@ const Home = () => {
             }
             footer='Subscribe & save on weekly meals'
             center
+            align='center'
           />
           <Card
             title={
@@ -133,6 +136,7 @@ const Home = () => {
             }
             footer='Delicious vegetarian & vegan options'
             center
+            align='center'
           />
         </Content>
       </section>
