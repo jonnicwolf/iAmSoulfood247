@@ -67,6 +67,10 @@ const Container = styled.form`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.md};
   margin-top: ${({ theme}) => theme.spacing.md};
+  
+  @media (min-width: 900px) {
+    width: 90vw;
+  }
 `;
 const Input = styled.textarea`
   border-radius: ${({ theme }) => theme.radii.md};
