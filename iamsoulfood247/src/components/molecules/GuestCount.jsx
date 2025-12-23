@@ -1,17 +1,44 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Text from '../common/Text';
 import Button from '../common/Button';
 
-const GuestCount = () => {
+const GuestCount = ({ stepGetter, stepSetter }) => {
   const [guests, setGuests] = useState(10);
+  const [restrictions, setRestrictions] = useState([]);
+
+  const navigate = useNavigate();
+
+  const handleSliderChange = (e) => {
+    setGuests(e.target.value);
+  };
+  const handleExactGuest = (e) => {
+    setGuests(e.target.value);
+  };
+  const handleRestrictions = (e) => {
+    const { name, checked } = e.target;
+    checked
+    ? setRestrictions(prev => [...prev, e.target.value])
+    : setRestrictions(prev => prev.filter(item => item !== name));
+  };
+  const handleBackClick = () => {
+    navigate(-1);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    sessionStorage.setItem('guestCount', guests);
+    sessionStorage.setItem('restrictions', restrictions);
+    stepSetter(stepGetter+1);
+    navigate('/catering/theme');
+  };
 
   return (
-    <Container>
+    <Container onSubmit={handleSubmit}>
       <GuestSection>
-      
-        <Label1 htmlFor="">Number of Guests *</Label1>
+        <Label1 htmlFor="guestNumberRange">Number of Guests *</Label1>
         <GuestIcon>
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
           <Text
@@ -21,18 +48,28 @@ const GuestCount = () => {
             bold
           />
         </GuestIcon>
-        <Input type="range" min='10' max='500'/>
+        <Input
+          name='guestNumberRange'
+          id='guestNumberRange'
+          type="range"
+          min='10' max='500'
+          step='10'
+          value={guests} onChange={handleSliderChange} />
         <MinMaxWrapper>
           <span>10 Guests</span>
           <span>500 Guests</span>
         </MinMaxWrapper>
       </GuestSection>
-      <Label2>
+      <Label2 htmlFor='guestNumberExact'>
         Or enter exact number
       </Label2>
       <input
+        name='guestNumberExact'
+        id='guestNumberExact'
         type='number'
+        value={guests}
         placeholder='50'
+        onChange={handleExactGuest}
       />
       <Text
         content='Select all that apply. this helps us recommend appropriate menu items.'
@@ -42,35 +79,35 @@ const GuestCount = () => {
 
       <RestrictionsWrapper>
         <Restriction>
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="vegetarian" id="vegetarian" onChange={handleRestrictions} />
           <RestrictionText>Vegetarian</RestrictionText>
         </Restriction>
         <Restriction>
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="vegan" id="vegan" onChange={handleRestrictions} />
           <RestrictionText>Vegan</RestrictionText>
         </Restriction>
         <Restriction>
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="glutenFree" id="glutenFree" onChange={handleRestrictions} />
           <RestrictionText>Gluten-Free</RestrictionText>
         </Restriction>
         <Restriction>
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="dairyFree" id="dairyFree" onChange={handleRestrictions} />
           <RestrictionText>Dairy-Free</RestrictionText>
         </Restriction>
         <Restriction>
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="nutAllergies" id="nutAllergies" onChange={handleRestrictions} />
           <RestrictionText>Nut Allergies</RestrictionText>
         </Restriction>
         <Restriction>
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="shellfishAllergies" id="shellfishAllergies" onChange={handleRestrictions} />
           <RestrictionText>Shellfish Allergies</RestrictionText>
         </Restriction>
         <Restriction>
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="halal" id="halal" onChange={handleRestrictions} />
           <RestrictionText>Halal</RestrictionText>
         </Restriction>
         <Restriction>
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="kosher" id="kosher" onChange={handleRestrictions} />
           <RestrictionText>Kosher</RestrictionText>
         </Restriction>
       </RestrictionsWrapper>
@@ -87,6 +124,7 @@ const GuestCount = () => {
           
           color='text'
           backgroundColor='surface'
+          onClick={handleBackClick}
         />
         <Button
           name={
@@ -108,9 +146,7 @@ const GuestCount = () => {
 const Container = styled.form`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.md}; 
-  // justify-content: center;
-  // align-items: center;
+  gap: ${({ theme }) => theme.spacing.md};
   margin-top: ${({ theme}) => theme.spacing.md};
 `;
 const GuestSection = styled.div`
