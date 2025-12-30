@@ -66,7 +66,7 @@ const Menu = ({ stepGetter, stepSetter }) => {
       </ServiceButton>
       <ServiceButton value='buffetStyle' onClick={handleServiceChange}>
         <Text
-          content={`'Cocktail/Heavy Hors d'oeuvers`}
+          content={`Cocktail/Heavy Hors d'oeuvers`}
           textSize='md'
           s_textSize='sm'
           bold
@@ -127,6 +127,10 @@ const Container = styled.form`
   gap: ${({ theme }) => theme.spacing.md};
   justify-content: center;
   margin-top: ${({ theme}) => theme.spacing.md};
+
+  @media (min-width: 900px) {
+    width: 90vw;
+  }
 `;
 const ServiceButton = styled.button`
   display: flex;
