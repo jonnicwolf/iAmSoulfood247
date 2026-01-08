@@ -14,14 +14,15 @@ const Menu = ({ stepGetter, stepSetter }) => {
   };
   const handleBackClick = () => {
     stepSetter(stepGetter-1);
-  }
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
 
     sessionStorage.setItem('service', service);
     navigate('/catering/customize');
     stepSetter(stepGetter+1);
-  }
+  };
+
   return (
     <Container onSubmit={handleSubmit}>
       <h4>Service Style *</h4>

@@ -14,6 +14,7 @@ const DateTime = ({ stepGetter, stepSetter }) => {
     address2: '',
     city: '',
     state: '',
+    zip: '',
   });
   const navigate = useNavigate();
 
@@ -33,7 +34,7 @@ const DateTime = ({ stepGetter, stepSetter }) => {
     const { name, value } = e.target;
 
     setLocation(prev => ({
-      ...prev,
+      ...prev, 
       [name]: value
     }));
   };
@@ -44,7 +45,7 @@ const DateTime = ({ stepGetter, stepSetter }) => {
     sessionStorage.setItem('start', start);
     sessionStorage.setItem('end', end);
     sessionStorage.setItem('setup', setup);
-    sessionStorage.setItem('location', location);
+    sessionStorage.setItem('location', JSON.stringify(location));
 
     stepSetter(stepGetter+1);
     navigate('/catering/menu');
