@@ -5,11 +5,29 @@ import styled from 'styled-components';
 import Button from '../common/Button';
 import Text from '../common/Text';
 
-const Quote = () => {
+const Quote = ({ stepGetter,stepSetter }) => {
+  const [fullName, setFullName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [company, setCompany] = useState('');
+
   const getSessionData = Object.keys(sessionStorage).reduce((obj, key) => {
     obj[key] = sessionStorage.getItem(key);
     return obj;
   }, {});
+
+  const handleName = (e) => {
+    setFullName(e.target.value);
+  };
+  const handlePhone = (e) => {
+    setPhone(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleCompany = (e) => {
+    setCompany(e.target.value);
+  };
 
   const handleBackClick = () => {
     stepSetter(stepGetter-1);
@@ -22,47 +40,45 @@ const Quote = () => {
     stepSetter(stepGetter+1);
   };
 
-  const fooSessionStorage = {
-    customService: "",
-    date: "2026-01-10",
-    end: "2026-01-10",
-    eventDescription: "A retirement party for our dear husband, father, and coworker",
-    eventTitle: "Bob's retirement party",
-    eventType: "Other",
-    guestCount: "50",
-    location: {
-      address: '555 Vesey St',
-      address2: 'Apt 1',
-      city: 'New York',
-      state: 'NY',
-      zip: '10010',
-    },
-    restrictions: "",
-    service: "buffetStyle",
-    setup: "",
-    specialService: "",
-    start: "3:00PM",
-    theme: "Rustic",
-  };
+  // const fooSessionStorage = {
+  //   customService: "",
+  //   date: "2026-01-10",
+  //   end: "2026-01-10",
+  //   eventDescription: "A retirement party for our dear husband, father, and coworker",
+  //   eventTitle: "Bob's retirement party",
+  //   eventType: "Other",
+  //   guestCount: "50",
+  //   location: {
+  //     address: '555 Vesey St',
+  //     address2: 'Apt 1',
+  //     city: 'New York',
+  //     state: 'NY',
+  //     zip: '10010',
+  //   },
+  //   restrictions: "",
+  //   service: "buffetStyle",
+  //   setup: "",
+  //   specialService: "",
+  //   start: "3:00PM",
+  //   theme: "Rustic",
+  // };
 
-  useEffect(() => {
-    Object.entries(fooSessionStorage).forEach(([key, value]) => {
-      sessionStorage.setItem(
-        key,
-        typeof value === 'object'
-          ? JSON.stringify(value)
-          : String(value)
-      );
-    });
-  },[]);
-
-  // console.log('getSessionData: ', getSessionData);
+  // useEffect(() => {
+  //   Object.entries(fooSessionStorage).forEach(([key, value]) => {
+  //     sessionStorage.setItem(
+  //       key,
+  //       typeof value === 'object'
+  //         ? JSON.stringify(value)
+  //         : String(value)
+  //     );
+  //   });
+  // },[]);
 
   const date1 = Date.parse(getSessionData.date);
   const dateText = new Date(date1).toDateString();
   const location = JSON.parse(getSessionData.location);
+  const isFormComplete = [fullName, phone, email, company].every(Boolean);
 
-  console.log(dateText)
   return (
     <Container>
       <Div>
@@ -125,14 +141,14 @@ const Quote = () => {
           <Cost>$300.00</Cost>
           <Item>Additional Services</Item>
           <Cost>$200.00</Cost>
-          <HR/>
+          <HR />
           <Item>Subtotal</Item>
           <Cost>$2400.00</Cost>
           <Item>Tax & Fees</Item>
           <Cost>$192.00</Cost>
           <HR />
           <Item><strong>Total Estimated Cost</strong></Item>
-          <Cost>$2592.00</Cost>
+          <Cost style={{color: 'red'}}><strong>$2592.00</strong></Cost>
           <Item>Per Person</Item>
           <Cost>$26.00</Cost>
         </CustomQuote>
@@ -167,6 +183,8 @@ const Quote = () => {
               </div>
               <Input
                 type='text'
+                value={fullName}
+                onChange={handleName}
                 placeholder='John Doe'
               />
             </div>
@@ -177,17 +195,21 @@ const Quote = () => {
               </div>
               <Input
                 type='text'
-                placeholder='John Doe'
+                value={phone}
+                onChange={handlePhone}
+                placeholder='(917)555-2424'
               />
             </div>
             <div>
               <div style={{display: 'flex', gap: '0.5rem', alignItems: 'center'}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-              <Label htmlFor=''>Email *</Label>
+                <Label htmlFor=''>Email *</Label>
               </div>
               <Input
                 type='text'
-                placeholder='John Doe'
+                value={email}
+                onChange={handleEmail}
+                placeholder='johndoe@soulfood.com'
               />
             </div>
             <div>
@@ -197,14 +219,16 @@ const Quote = () => {
               </div>
               <Input
                 type='text'
-                placeholder='John Doe'
+                value={company}
+                onChange={handleCompany}
+                placeholder='Acme Corp'
               />
             </div>
           </ContactInfo>
         </Div>
       </Div>
 
-      <Submit>
+      {isFormComplete && <Submit>
         <div style={{display: 'flex', gap: '0.5rem', alignItems: 'center'}}>
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-icon lucide-circle-check"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
           <h3>Ready to Submit!</h3>
@@ -217,7 +241,7 @@ const Quote = () => {
             color='primary'
           />
         </div>
-      </Submit>
+      </Submit>}
 
       <FooterContentWrap>
         <Button
@@ -317,7 +341,6 @@ const Input = styled.input`
   border-radius: ${({ theme }) => theme.radii.md};
   border: 1px groove rgba(0,0,0,0.2);
   padding: ${({ theme }) => theme.spacing.sm};
-  max-width: 100%;
 `;
 const ContactInfo = styled.div`
   display: grid;
