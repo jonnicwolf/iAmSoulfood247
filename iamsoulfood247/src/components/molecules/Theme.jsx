@@ -23,6 +23,8 @@ const Theme = ({ stepGetter, stepSetter }) => {
     navigate('/catering/guestCount');
   };
 
+  const isFormComplete = [theme].every(Boolean);
+
   return (
     <Container onSubmit={handleSubmit}>
       <h4>Choose Your Event Theme</h4>
@@ -57,6 +59,7 @@ const Theme = ({ stepGetter, stepSetter }) => {
           color='text'
           backgroundColor='primary'
           type='submit'
+          disabled={!isFormComplete}
         />
       </FooterContentWrap>
     </Container>

@@ -17,6 +17,7 @@ const DateTime = ({ stepGetter, stepSetter }) => {
     zip: '',
   });
   const navigate = useNavigate();
+  const isFormComplete = [date, start, end, setup, Object.keys(location).every(Boolean)].every(Boolean);
 
   const handleDate = (e) => {
     setDate(e.target.value);
@@ -53,7 +54,9 @@ const DateTime = ({ stepGetter, stepSetter }) => {
   const handleBackClick = () => {
     stepSetter(stepGetter-1);
     navigate('/catering/theme');
-  }
+  };
+
+  
 
   return (
     <Container onSubmit={handleSubmit}>
@@ -65,6 +68,7 @@ const DateTime = ({ stepGetter, stepSetter }) => {
         <Input
           type='date'
           onChange={handleDate}
+          required
         />
       </Div>
       <Div>
@@ -75,6 +79,7 @@ const DateTime = ({ stepGetter, stepSetter }) => {
         <Input
           type='time'
           onChange={handleStart}
+          required
         />
       </Div>
       <Div>
@@ -85,6 +90,7 @@ const DateTime = ({ stepGetter, stepSetter }) => {
         <Input
           type='time'
           onChange={handleEnd}
+          required
         />
       </Div>
       <Div>
@@ -95,6 +101,7 @@ const DateTime = ({ stepGetter, stepSetter }) => {
         <Input
           type='time'
           onChange={handleSetup}
+          required
         />
       </Div>
       <Div>
@@ -106,21 +113,25 @@ const DateTime = ({ stepGetter, stepSetter }) => {
           type='text'
           placeholder='Address Line 1'
           onChange={handleLocation}
+          required
         />
         <Input
           type='text'
           placeholder='Address Line 2'
           onChange={handleLocation}
+          required
         />
         <Input
           type='text'
           placeholder='New York City'
           onChange={handleLocation}
+          required
         />
         <Input
           type='number'
           placeholder='Zip Code'
           onChange={handleLocation}
+          required
         />
       </Div>
 
@@ -148,6 +159,7 @@ const DateTime = ({ stepGetter, stepSetter }) => {
           color='text'
           backgroundColor='primary'
           type='submit'
+          disabled={!isFormComplete}
         />
       </FooterContentWrap>
     </Container>

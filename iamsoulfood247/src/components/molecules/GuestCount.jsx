@@ -36,6 +36,8 @@ const GuestCount = ({ stepGetter, stepSetter }) => {
     navigate('/catering/theme');
   };
 
+  const isFormComplete = [guests>10,restrictions.length].every(Boolean);
+
   return (
     <Container onSubmit={handleSubmit}>
       <GuestSection>
@@ -138,6 +140,7 @@ const GuestCount = ({ stepGetter, stepSetter }) => {
           color='text'
           backgroundColor='primary'
           type='submit'
+          disabled={!isFormComplete}
         />
       </FooterContentWrap>
     </Container>

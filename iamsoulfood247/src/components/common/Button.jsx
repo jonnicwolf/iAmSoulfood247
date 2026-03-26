@@ -30,6 +30,13 @@ const ButtonStyled = styled.button`
     letter-spacing: 0.15rem;
     padding: ${({ theme }) => `${theme.spacing.sm}, ${theme.spacing.xl}`};
   };
+
+  &:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    border: 1px solid #999999;
+    cursor: not-allowed;
+  }
 `;
 
 export default Button;

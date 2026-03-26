@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -39,40 +39,6 @@ const Quote = ({ stepGetter,stepSetter }) => {
     navigate('/catering/customize');
     stepSetter(stepGetter+1);
   };
-
-  // const fooSessionStorage = {
-  //   customService: "",
-  //   date: "2026-01-10",
-  //   end: "2026-01-10",
-  //   eventDescription: "A retirement party for our dear husband, father, and coworker",
-  //   eventTitle: "Bob's retirement party",
-  //   eventType: "Other",
-  //   guestCount: "50",
-  //   location: {
-  //     address: '555 Vesey St',
-  //     address2: 'Apt 1',
-  //     city: 'New York',
-  //     state: 'NY',
-  //     zip: '10010',
-  //   },
-  //   restrictions: "",
-  //   service: "buffetStyle",
-  //   setup: "",
-  //   specialService: "",
-  //   start: "3:00PM",
-  //   theme: "Rustic",
-  // };
-
-  // useEffect(() => {
-  //   Object.entries(fooSessionStorage).forEach(([key, value]) => {
-  //     sessionStorage.setItem(
-  //       key,
-  //       typeof value === 'object'
-  //         ? JSON.stringify(value)
-  //         : String(value)
-  //     );
-  //   });
-  // },[]);
 
   const date1 = Date.parse(getSessionData.date);
   const dateText = new Date(date1).toDateString();
@@ -267,6 +233,7 @@ const Quote = ({ stepGetter,stepSetter }) => {
           color='text'
           backgroundColor='primary'
           type='submit'
+          disabled={!isFormComplete}
         />
       </FooterContentWrap>
     </Container>
