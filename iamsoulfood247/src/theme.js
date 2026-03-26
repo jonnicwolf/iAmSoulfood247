@@ -5,6 +5,7 @@ export const theme = {
     md: '1rem',
     lg: '2rem',
     xl: '4rem',
+    xxl: '8rem',
   },
   fontSize: {
     xs: '0.75rem',

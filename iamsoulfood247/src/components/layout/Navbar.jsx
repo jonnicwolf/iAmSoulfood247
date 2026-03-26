@@ -48,7 +48,7 @@ const Navbar = ({ logo, }) => {
         <LogoContainer>
           <Logo src={logo} />
           <span>
-            <LogoTitle>iAmSoulfood247</LogoTitle>
+            <LogoTitle>i<Red>Am</Red><Yellow>Soulfood</Yellow>247</LogoTitle>
             <p>Order & Eat</p>
           </span>
         </LogoContainer>
@@ -93,7 +93,7 @@ const Nav = styled.nav`
   box-shadow: ${({ theme }) => theme.shadows.md};
 `;
 const NavRow1 = styled.div`
-  background: linear-gradient(to right, #ffffff 25%, #2ecc71 70%);
+  background: linear-gradient(to right, #ffffff 50%, #2ecc71 70%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -154,3 +154,9 @@ const RightContentWrapper = styled.div`
   justify-items: center;
   padding-right: 1rem;
 `;
+const Yellow = styled.span`
+  color: ${({ theme }) => theme.colors.warning};
+`;
+const Red = styled.span`
+  color: ${({ theme }) => theme.colors.error};
+`

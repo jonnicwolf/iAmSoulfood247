@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const Card = ({ title, size = 'lg', borderRadius='lg', children, footer, center, ...props }) => {
+const Card = ({ title, size = 'lg', borderRadius='lg', children, footer, center, align, ...props }) => {
   return (
-    <CardWrapper center={center} borderRadius={borderRadius} {...props}>
+    <CardWrapper center={center} borderRadius={borderRadius} align={align} {...props}>
       {title && <CardHeader size={size}>{title}</CardHeader>}
       <CardBody>{children}</CardBody>
       {footer && <CardFooter center={center}>{footer}</CardFooter>}
@@ -19,7 +19,7 @@ const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.sm};
-  align-items: ${props => (props.center ? 'center' : 'flex-start')};
+  align-items: ${props => props.align};
   transition: box-shadow 0.2s ease;
   width: 100%;
 
@@ -49,6 +49,7 @@ const CardFooter = styled.div`
   font-size: ${({ theme }) => theme.fontSize.sm};
   color: ${({ theme }) => theme.colors.text};
   border-top: 1px solid ${({ theme }) => theme.colors.background};
-  text-align: ${({ center }) => center ? 'center' : 'left'}
+  text-align: ${({ center }) => center ? 'center' : 'left'};
+  width: 100%;
 `;
  
